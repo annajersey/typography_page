@@ -1,6 +1,7 @@
 body {
   background: #fff;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  color: #444; }
 
 i.fas {
   font-family: 'FontAwesome';
@@ -14,28 +15,68 @@ i.fas {
   color: #fff;
   background: #222;
   padding: 10px 0; }
-  .top-panel .top-panel-item {
+  .top-panel-item {
     float: left;
     padding: 0 20px;
     text-align: center;
     font-size: 11px;
     border-left: 1px solid #444; }
-    .top-panel .top-panel-item:last-child {
+    .top-panel-item:last-child {
       border-right: 1px solid #444; }
-    .top-panel .top-panel-item span {
+    .top-panel-item span {
       padding: 0 7px; }
-    .top-panel .top-panel-item i {
+    .top-panel-item i {
       font-size: 12px; }
-    .top-panel .top-panel-item img {
+    .top-panel-item img {
       vertical-align: text-top; }
   @media (max-width: 768px) {
     .top-panel .float-right {
       display: none; } }
 
 /* -----------------  Navbar  --------------------- */
-nav {
-  height: 117px; }
-  nav .mini-cart {
+nav.navbar.navbar-light {
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+  background: #fff; }
+  nav.navbar.navbar-light .navbar-nav {
+    margin-right: 45px; }
+  nav.navbar.navbar-light .mini-cart {
     border: 2px solid #444;
     width: 140px;
-    height: 42px; }
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background: url("../img/mini-cart.gif") no-repeat 15px center;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 14px;
+    position: relative; }
+    nav.navbar.navbar-light .mini-cart #num-items {
+      width: 30px;
+      height: 30px;
+      background: #444;
+      border-radius: 50%;
+      color: #fff;
+      position: absolute;
+      right: -15px;
+      top: 5px;
+      font-size: 11px;
+      font-weight: normal;
+      text-align: center;
+      line-height: 20px;
+      border: 5px solid #fff; }
+  nav.navbar.navbar-light .nav-item.active a {
+    color: #e24545; }
+  nav.navbar.navbar-light .nav-item.active a::first-letter {
+    border-bottom: 2px solid #e24545;
+    padding-bottom: 4px; }
+  nav.navbar.navbar-light .nav-item.last {
+    margin-left: 4px; }
+  nav.navbar.navbar-light .nav-link {
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+    font-size: 13px; }
+    nav.navbar.navbar-light .nav-link .fa-angle-down {
+      font-size: 12px;
+      margin-left: 4px; }

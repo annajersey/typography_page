@@ -1,4 +1,5 @@
 $bg-color: #fff;
+$gray-color: #444;
 $font-stack: 'Montserrat', sans-serif;
 $screen-md-min: 768px;
 @mixin ms {
@@ -10,6 +11,7 @@ $screen-md-min: 768px;
 body {
   background: $bg-color;
   font-family: $font-stack;
+  color: $gray-color;
 }
 
 i.fas {
@@ -17,47 +19,66 @@ i.fas {
   font-style: normal;
 }
 
-/* ----------------- Top panel --------------------- */
-.top-panel {
-  height: 40px;
-  line-height: 20px;
-  width: 100%;
-  color: #fff;
-  background: #222;
-  padding: 10px 0;
-  .top-panel-item {
-    float: left;
-    padding: 0 20px;
-    text-align: center;
-    font-size: 11px;
-    border-left: 1px solid #444;
-    &:last-child {
-      border-right: 1px solid #444;
-    }
-    span {
-      padding: 0 7px;
-    }
-    i {
-      font-size: 12px;
-    }
-    img {
-      vertical-align: text-top
-    }
-  }
-  .float-right {
-    @include ms {
-      display: none
-    }
-  }
-}
-
+@import "top-panel";
 /* -----------------  Navbar  --------------------- */
-nav {
-  height: 117px;
-  .mini-cart{
-    border: 2px solid #444;
-    width:140px;
-    height:42px;
+nav.navbar.navbar-light {
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  .navbar-nav {
+    margin-right: 45px;
+  }
+  .mini-cart {
+    border: 2px solid $gray-color;
+    width: 140px;
+    height: 42px;
+    line-height: 42px;
+    text-align:center;
+    background: url("../img/mini-cart.gif") no-repeat 15px center ;
+    font-size: 15px;
+    font-weight:bold;
+    padding-left:14px;
+    position: relative;
+    #num-items{
+      width:30px;
+      height:30px;
+      background: $gray-color;
+      border-radius: 50%;
+      color:#fff;
+      position: absolute;
+      right:-15px;
+      top:5px;
+      font-size:11px;
+      font-weight:normal;
+      text-align: center;
+      line-height: 20px;
+      border:5px solid #fff;
+    }
+  }
+  .nav-item {
+    &.active {
+      a {
+        color: #e24545;
+      }
+      a::first-letter {
+        border-bottom: 2px solid #e24545;
+        padding-bottom:4px;
+      }
+    }
+    &.last {
+      margin-left: 4px;
+    }
+  }
+
+  .nav-link {
+    font-weight: bold;
+    color: $gray-color;
+    text-transform: uppercase;
+    font-size: 13px;
+    .fa-angle-down{
+      font-size:12px;
+      margin-left:4px;
+    }
   }
 }
 
