@@ -1,57 +1,59 @@
 $bg-color: #fff;
 $gray-color: #444;
+$light-gray-color: #eee;
+$red-color: #e24545;
 $font-stack: 'Montserrat', sans-serif;
 $font-sans: 'Open Sans', sans-serif;
-$screen-md-min: 768px;
-@mixin ms {
-  @media (max-width: #{$screen-md-min}) {
+$screen-sm-max: 768px;
+$screen-md-max: 1200px;
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
     @content;
   }
 }
-%headings {
-  margin-bottom:55px;
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
 }
 body {
   background: $bg-color;
   font-family: $font-stack;
   color: $gray-color;
+  margin-bottom: 1000px;
 }
 
 i.fas {
   font-family: 'FontAwesome';
   font-style: normal;
 }
+.title {
+  font-family: $font-sans;
+  font-size: 30px;
+  font-weight: 300;
+  margin-top:55px;
+}
 
 @import "header";
-.title{
-  font-family: $font-sans;
-  font-size:30px;
-  font-weight: 300;
-}
-.headings{
-  font-weight:bold;
-  margin-top:50px;
-  color:#222;
-}
-@for $i from 1 through 6 {
-  h#{$i} {
-    @extend %headings;
-  }
-  .bold h#{$i} {
-    font-weight:bold;
-  }
-}
+@import "section1";
 
-.red-row div{
-  margin-top:50px;
-  color:#e24545;
-  font-size:15px;
-  font-family: $font-sans;
-  font-weight: bold;
-  margin-top:64px;
-}
-
-.border-bottom{
-  border-bottom:1px solid $gray-color;
-  padding-bottom:35px;
+.section2 {
+  margin-top: 3px;
+  border-top: 1px solid $light-gray-color;
+  padding-top:75px;
+  h3 {
+    color: #222;
+    text-transform:uppercase;
+    font-weight: bold;
+  }
+  .red-line{
+    width:30px;
+    height:4px;
+    background: $red-color;
+  }
+  p{
+    font-size:12px;
+    margin-top:40px;
+    line-height:25px;
+  }
 }

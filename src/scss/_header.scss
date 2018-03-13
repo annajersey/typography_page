@@ -1,4 +1,4 @@
-header{margin-bottom:80px;}
+header{margin-bottom:25px;}
 /* ----------------- Top panel --------------------- */
 .top-panel {
   height: 40px;
@@ -27,7 +27,7 @@ header{margin-bottom:80px;}
     }
   }
   .float-right {
-    @include ms {
+    @include sm {
       display: none
     }
   }
@@ -71,10 +71,10 @@ nav.navbar.navbar-light {
   .nav-item {
     &.active {
       a {
-        color: #e24545;
+        color: $red-color;
       }
       a::first-letter {
-        border-bottom: 2px solid #e24545;
+        border-bottom: 2px solid $red-color;
         padding-bottom: 4px;
       }
     }
