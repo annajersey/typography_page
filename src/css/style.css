@@ -1,3 +1,6 @@
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 55px; }
+
 body {
   background: #fff;
   font-family: "Montserrat", sans-serif;
@@ -6,6 +9,9 @@ body {
 i.fas {
   font-family: 'FontAwesome';
   font-style: normal; }
+
+header {
+  margin-bottom: 80px; }
 
 /* ----------------- Top panel --------------------- */
 .top-panel {
@@ -80,3 +86,43 @@ nav.navbar.navbar-light {
     nav.navbar.navbar-light .nav-link .fa-angle-down {
       font-size: 12px;
       margin-left: 4px; }
+
+.title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 300; }
+
+.headings {
+  font-weight: bold;
+  margin-top: 50px;
+  color: #222; }
+
+.bold h1 {
+  font-weight: bold; }
+
+.bold h2 {
+  font-weight: bold; }
+
+.bold h3 {
+  font-weight: bold; }
+
+.bold h4 {
+  font-weight: bold; }
+
+.bold h5 {
+  font-weight: bold; }
+
+.bold h6 {
+  font-weight: bold; }
+
+.red-row div {
+  margin-top: 50px;
+  color: #e24545;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 64px; }
+
+.border-bottom {
+  border-bottom: 1px solid #444;
+  padding-bottom: 35px; }

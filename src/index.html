@@ -4,8 +4,8 @@
     <title>Typography Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Montserrat:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -15,7 +15,8 @@
     <div class="top-panel">
         <div class="container">
             <div class="float-left">
-                <div class="top-panel-item"><img src="../img/flag.gif"><span>ENG</span><i class="fas fa-angle-down"></i></div>
+                <div class="top-panel-item"><img src="../img/flag.gif"><span>ENG</span><i class="fas fa-angle-down"></i>
+                </div>
                 <div class="top-panel-item"><span>USD</span><i class="fas fa-angle-down"></i></div>
                 <div class="top-panel-item"><span>MY ACCOUNT</span><i class="fas fa-angle-down"></i></div>
             </div>
@@ -28,54 +29,95 @@
     </div>
     <nav class="navbar navbar-expand-lg  navbar-light ">
         <div class="container">
-        <a class="navbar-brand" href="#"><img src="../img/logo.gif"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <a class="navbar-brand" href="#"><img src="../img/logo.gif"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            All brands
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Latest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item last">
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                    </li>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        All brands
-                        <i class="fas fa-angle-down"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Latest</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Featured</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-                <li class="nav-item last">
-                    <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                </li>
-
-            </ul>
-            <div class="mini-cart my-2 my-lg-0">
-                $ 460.00
-                <div id="num-items">2</div>
+                </ul>
+                <div class="mini-cart my-2 my-lg-0">
+                    $ 460.00
+                    <div id="num-items">2</div>
+                </div>
             </div>
-        </div>
         </div>
     </nav>
 </header>
+<div class="border-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 bold">
+                <div class="title">
+                    Bold Headings
+                </div>
+                <div class="headings float-left">
+                    <h1>H1. Bootstrap heading</h1>
+                    <h2>H2. Bootstrap heading</h2>
+                    <h3>H3. Bootstrap heading</h3>
+                    <h4>H4. Bootstrap heading</h4>
+                    <h5>H5. Bootstrap heading</h5>
+                    <h6>H6. Bootstrap heading</h6>
+                </div>
+                <div class="red-row float-right">
+                    <div>42 pt</div>
+                    <div>34 pt</div>
+                    <div>26 pt</div>
+                    <div>20 pt</div>
+                    <div>18 pt</div>
+                    <div>16 pt</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="title">
+                    Light/Regular Headings
+                </div>
+                <div class="headings">
+                    <h1>H1. Bootstrap heading</h1>
+                    <h2>H2. Bootstrap heading</h2>
+                    <h3>H3. Bootstrap heading</h3>
+                    <h4>H4. Bootstrap heading</h4>
+                    <h5>H5. Bootstrap heading</h5>
+                    <h6>H6. Bootstrap heading</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 </body>

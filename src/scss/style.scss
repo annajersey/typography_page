@@ -1,13 +1,16 @@
 $bg-color: #fff;
 $gray-color: #444;
 $font-stack: 'Montserrat', sans-serif;
+$font-sans: 'Open Sans', sans-serif;
 $screen-md-min: 768px;
 @mixin ms {
   @media (max-width: #{$screen-md-min}) {
     @content;
   }
 }
-
+%headings {
+  margin-bottom:55px;
+}
 body {
   background: $bg-color;
   font-family: $font-stack;
@@ -19,71 +22,36 @@ i.fas {
   font-style: normal;
 }
 
-@import "top-panel";
-/* -----------------  Navbar  --------------------- */
-nav.navbar.navbar-light {
-  padding: 30px 0;
-  border-bottom: 1px solid #eee;
-  background: #fff;
-  .navbar-nav {
-    margin-right: 45px;
+@import "header";
+.title{
+  font-family: $font-sans;
+  font-size:30px;
+  font-weight: 300;
+}
+.headings{
+  font-weight:bold;
+  margin-top:50px;
+  color:#222;
+}
+@for $i from 1 through 6 {
+  h#{$i} {
+    @extend %headings;
   }
-  .mini-cart {
-    border: 2px solid $gray-color;
-    width: 140px;
-    height: 42px;
-    line-height: 42px;
-    text-align:center;
-    background: url("../img/mini-cart.gif") no-repeat 15px center ;
-    font-size: 15px;
+  .bold h#{$i} {
     font-weight:bold;
-    padding-left:14px;
-    position: relative;
-    #num-items{
-      width:30px;
-      height:30px;
-      background: $gray-color;
-      border-radius: 50%;
-      color:#fff;
-      position: absolute;
-      right:-15px;
-      top:5px;
-      font-size:11px;
-      font-weight:normal;
-      text-align: center;
-      line-height: 20px;
-      border:5px solid #fff;
-    }
-  }
-  .nav-item {
-    &.active {
-      a {
-        color: #e24545;
-      }
-      a::first-letter {
-        border-bottom: 2px solid #e24545;
-        padding-bottom:4px;
-      }
-    }
-    &.last {
-      margin-left: 4px;
-    }
-  }
-
-  .nav-link {
-    font-weight: bold;
-    color: $gray-color;
-    text-transform: uppercase;
-    font-size: 13px;
-    .fa-angle-down{
-      font-size:12px;
-      margin-left:4px;
-    }
   }
 }
 
+.red-row div{
+  margin-top:50px;
+  color:#e24545;
+  font-size:15px;
+  font-family: $font-sans;
+  font-weight: bold;
+  margin-top:64px;
+}
 
-
-
-
-
+.border-bottom{
+  border-bottom:1px solid $gray-color;
+  padding-bottom:35px;
+}
