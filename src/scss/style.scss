@@ -11,27 +11,45 @@ $screen-md-max: 1200px;
     @content;
   }
 }
+
 @mixin md {
   @media (max-width: #{$screen-md-max}) {
     @content;
   }
 }
+
 body {
   background: $bg-color;
   font-family: $font-stack;
   color: $gray-color;
   margin-bottom: 1000px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.red {
+  color: $red-color
+}
+
+.blue {
+  color: #0897c5
+}
+
+.orange {
+  color: #ff750b
 }
 
 i.fas {
   font-family: 'FontAwesome';
   font-style: normal;
 }
+
 .title {
   font-family: $font-sans;
   font-size: 30px;
   font-weight: 300;
-  margin-top:55px;
+  margin-top: 55px;
+  margin-bottom: 40px;
 }
 
 @import "header";
@@ -40,20 +58,127 @@ i.fas {
 .section2 {
   margin-top: 3px;
   border-top: 1px solid $light-gray-color;
-  padding-top:75px;
+  padding-top: 75px;
   h3 {
     color: #222;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-weight: bold;
   }
-  .red-line{
-    width:30px;
-    height:4px;
+  .red-line {
+    width: 30px;
+    height: 4px;
     background: $red-color;
+    margin-bottom: 40px;
+
   }
-  p{
-    font-size:12px;
-    margin-top:40px;
-    line-height:25px;
+  p {
+    line-height: 23px;
+
   }
+  .col-md-6 p {
+    line-height: 32px;
+  }
+  .hightligt-red {
+    background: $red-color;
+    color: #fff
+  }
+  .hightligt-gray {
+    background: $gray-color;
+    color: #fff
+  }
+  .hightligt-dotted {
+    border: 1px dotted #777
+  }
+  span[class^="hightligt-"] {
+    padding: 5px;
+    margin: 0 5px;
+  }
+}
+
+
+
+@mixin tooltip(
+  $tooltip-background-color: white,
+  $tooltip-arrow-base: 2em,
+  $tooltip-arrow-length: 1em,
+  $tooltip-border-width: 0,
+  $tooltip-border-color: transparent,
+  $tooltip-transition-out-duration: .3s
+) {
+  // Sizing and positioning
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  bottom: 100%; // displayed on top
+  margin-bottom: $tooltip-arrow-length;
+
+  // Text and color properties.
+  background-color: $tooltip-background-color;
+  text-align: center;
+
+  // Animated properties.
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, $tooltip-arrow-length);
+  transition: visibility 0s linear $tooltip-transition-out-duration,
+  opacity $tooltip-transition-out-duration ease-in 0s,
+  transform $tooltip-transition-out-duration ease-in 0s;
+
+  // Disable events.
+  pointer-events: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    // Draw a triangle.
+    border-top: ($tooltip-arrow-length - $tooltip-border-width) solid $tooltip-background-color;
+    border-left: ($tooltip-arrow-base / 2 - $tooltip-border-width) solid transparent;
+    border-right: ($tooltip-arrow-base / 2 - $tooltip-border-width) solid transparent;
+    // Center the triangle.
+    margin-left: ($tooltip-border-width - $tooltip-arrow-base / 2);
+  }
+
+}
+
+@mixin has-tooltip($tooltip-transition-in-duration: .3s) {
+  position: relative;
+  // Prevent the tooltip from being clipped by its container.
+  overflow: visible;
+
+  // Display the tooltip on hover and on focus.
+  &:hover, &:focus {
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%, 0); // horizontally centered
+      transition: visibility 0s linear 0s,
+      opacity $tooltip-transition-in-duration ease-out 0s,
+      transform $tooltip-transition-in-duration ease-out 0s;
+    }
+  }
+}
+
+.has-tooltip {
+  @include has-tooltip($tooltip-transition-in-duration: .3s);
+}
+
+.tooltip {
+  min-width: 10em;
+  padding: .5em .75em;
+  box-shadow: 0 .05em .15em rgba(black, .1);
+  @include tooltip(
+          $tooltip-background-color: black,
+          $tooltip-arrow-base: 1em,
+          $tooltip-arrow-length: .5em,
+          $tooltip-transition-out-duration: .2s
+  );
+
+}
+
+.tooltip-without-border {
+
 }
