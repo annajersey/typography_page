@@ -1,29 +1,25 @@
 .section1 {
-  border-bottom: 1px solid $light-gray-color;
-  padding-bottom: 35px;
-  .headings {
-    font-weight: bold;
-    margin-top: 10px;
-    color: #222;
+  .row * {
+    align-self: center !important;
   }
-  @for $i from 1 through 6 {
-    h#{$i} {
-      margin-bottom: 55px;
-    }
-    .bold h#{$i} {
-      font-weight: bold;
-    }
-  }
-
-  .red-row div {
-    margin-top: 50px;
+  .col-red {
     color: $red-color;
     font-size: 15px;
     font-family: $font-sans;
     font-weight: bold;
-    margin-top: 64px;
-    @include md {
-      display: none
+    text-align: center;
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      margin: 22px 0;
+      display: inline-block;
+    }
+    .col-md-5:first-child h#{$i} {
+      font-weight: bold;
+    }
+    .col-bold h#{$i} {
+      font-weight: bold;
     }
   }
 
