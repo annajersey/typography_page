@@ -21,11 +21,11 @@
   }
   .hightligt-red {
     background: $red-color;
-    color: #fff
+    color: $white-color
   }
   .hightligt-gray {
     background: $gray-color;
-    color: #fff
+    color: $white-color
   }
   .hightligt-dotted {
     border: 1px dotted #777
@@ -84,7 +84,7 @@
   min-width: 10em;
   padding: .5em .75em;
   box-shadow: 0 .05em .15em rgba(black, .1);
-  color: #fff;
+  color: $white-color;
   &.red {
     @include tooltip($tooltip-background-color: $red-color);
   }

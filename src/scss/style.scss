@@ -1,7 +1,9 @@
-$bg-color: #fff;
 $gray-color: #444;
 $light-gray-color: #eee;
 $red-color: #e24545;
+$white-color: #fff;
+$bg-color: $white-color;
+
 $font-stack: 'Montserrat', sans-serif;
 $font-sans: 'Open Sans', sans-serif;
 $screen-sm-max: 768px;
@@ -51,6 +53,7 @@ i.fas {
   font-weight: 300;
   margin-top: 55px;
   margin-bottom: 40px;
+  color:#777;
 }
 
 .section {
@@ -63,57 +66,7 @@ i.fas {
 @import "header";
 @import "section1";
 @import "section2";
-.section3 {
-  ul, ol {
-    margin: 0 0 40px 0;
-    padding: 0 0 0 0;
-    list-style: none;
-    line-height: 28px;
-
-  }
-  ul li:before {
-    font-family: 'FontAwesome';
-    width: 10px;
-    height: 10px;
-    margin-right: 20px;
-    font-size: 14px;
-
-  }
-  ol li:before {
-    color: red;
-
-  }
-  ul.checkmark {
-    li:before {
-      content: "\f00c";
-    }
-    li:nth-child(4):before{
-      content: "\f00d";
-      color: $red-color;
-    }
-  }
-  ul.angle-right li:before {
-    content: "\f105";
-    font-size: 17px;
-    color: $red-color;
-    font-weight: bold;
-  }
-  ul.check-square li:before {
-    content: "\f14a";
-  }
-  ul.heart li:before {
-    content: "\f08a";
-  }
-  ul.long-arrow li:before {
-    content: "\f178";
-    color: $red-color;
-  }
-  ul.check-circle li:before {
-    content: "\f05d";
-    font-size: 16px;
-  }
-
-}
+@import "section3";
 
 
 

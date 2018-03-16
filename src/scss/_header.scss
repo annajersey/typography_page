@@ -3,7 +3,7 @@
   height: 40px;
   line-height: 20px;
   width: 100%;
-  color: #fff;
+  color: $white-color;
   background: #222;
   padding: 10px 0;
   &-item {
@@ -32,7 +32,7 @@
 /* -----------------  Navbar  --------------------- */
 nav.navbar.navbar-light {
   padding: 32px 0;
-  background: #fff;
+  background: $white-color;
   .navbar-nav {
     margin-right: 45px;
   }
@@ -52,7 +52,7 @@ nav.navbar.navbar-light {
       height: 30px;
       background: $gray-color;
       border-radius: 50%;
-      color: #fff;
+      color: $white-color;
       position: absolute;
       right: -15px;
       top: 5px;
@@ -60,7 +60,7 @@ nav.navbar.navbar-light {
       font-weight: normal;
       text-align: center;
       line-height: 20px;
-      border: 5px solid #fff;
+      border: 5px solid $white-color;
     }
   }
   .nav-item {
