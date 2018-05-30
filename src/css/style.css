@@ -4,8 +4,7 @@ body {
   color: #444;
   margin-bottom: 1000px;
   font-size: 12px;
-  font-weight: 500;
-  line-height: 23px; }
+  font-weight: 500; }
 
 .red {
   color: #e24545; }
@@ -24,11 +23,11 @@ i.fas {
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: 300;
-  margin-top: 55px;
+  margin-top: 67px;
   margin-bottom: 40px;
   color: #777; }
 
-.section {
+.section1, .section2, .section3 {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding-bottom: 55px;
@@ -383,3 +382,12 @@ nav.navbar.navbar-light {
   line-height: 42px;
   margin-right: 15px;
   margin-top: 5px; }
+
+blockquote {
+  padding-left: 60px;
+  font-size: 30px;
+  line-height: 1.3; }
+  blockquote div {
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3px; }

@@ -27,7 +27,6 @@ body {
   margin-bottom: 1000px;
   font-size: 12px;
   font-weight: 500;
-  line-height: 23px;
 }
 
 .red {
@@ -51,12 +50,12 @@ i.fas {
   font-family: $font-sans;
   font-size: 30px;
   font-weight: 300;
-  margin-top: 55px;
+  margin-top: 67px;
   margin-bottom: 40px;
   color:#777;
 }
 
-.section {
+%section {
   border-top: 1px solid $light-gray-color;
   border-bottom: 1px solid $light-gray-color;
   padding-bottom: 55px;
@@ -67,6 +66,17 @@ i.fas {
 @import "section1";
 @import "section2";
 @import "section3";
+
+blockquote{
+  padding-left:60px;
+  font-size:30px;
+  line-height: 1.3;
+  div{
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3px;
+  }
+}
 
 
 

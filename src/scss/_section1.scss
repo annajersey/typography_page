@@ -1,4 +1,5 @@
 .section1 {
+  @extend %section;
   .row * {
     align-self: center !important;
   }
