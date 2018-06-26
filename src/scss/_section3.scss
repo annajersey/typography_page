@@ -126,4 +126,7 @@
     @include big-letter(42px, $gray-color, 32px, 0)
   }
 
+  p.first{
+    margin-bottom:22px;
+  }
 }

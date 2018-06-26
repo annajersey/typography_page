@@ -1,0 +1,18 @@
+.section4 {
+  @extend %section;
+
+  blockquote{
+    padding-left:60px;
+    font-size:30px;
+    line-height: 1.3;
+    & .quote-red{
+      color: $red-color;
+    }
+    div{
+      font-weight: bold;
+      font-size: 12px;
+      padding-top: 3px;
+    }
+  }
+
+}
