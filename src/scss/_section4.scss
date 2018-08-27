@@ -2,16 +2,38 @@
   @extend %section;
 
   blockquote{
-    padding-left:60px;
+
+    display:flex;
     font-size:30px;
     line-height: 1.3;
-    & .quote-red{
-      color: $red-color;
+    p{
+      display:block
     }
-    div{
+    &.quoteRed{
+      div{
+        padding-left:30px;
+        p{
+          color: $red-color;
+        }
+      }
+
+    }
+    &.quote{
+      border-left:5px solid $red-color;
+      div{
+        padding-left:57px;
+      }
+    }
+    .fa-quote-left{
+      display:block;
+      float:left;
+      font-size:33px;
+    }
+    .quoteBy{
       font-weight: bold;
       font-size: 12px;
       padding-top: 3px;
+      display:block;
     }
   }
 

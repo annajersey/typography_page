@@ -13,7 +13,7 @@
       font-size: 14px;
       display: inline-block;
     }
-    &.checkmark {
+    &.checkMark {
       li:before {
         content: "\f00c";
       }
@@ -22,13 +22,13 @@
         color: $red-color;
       }
     }
-    &.angle-right li:before {
+    &.angleRight li:before {
       content: "\f105";
       font-size: 17px;
       color: $red-color;
       font-weight: bold;
     }
-    &.check-square {
+    &.checkSquare {
       li:before {
         content: "\f14a";
         color: $red-color;
@@ -54,12 +54,12 @@
       content: "\f08a";
       color: $red-color;
     }
-    &.long-arrow li:before {
+    &.longArrow li:before {
       content: "\f178";
       color: $red-color;
 
     }
-    &.check-circle li:before {
+    &.checkCircle li:before {
       content: "\f05d";
       font-size: 16px;
     }
@@ -81,7 +81,7 @@
       display: inline-block;
     }
 
-    &.red-numbers li:before {
+    &.redNumbers li:before {
       content: counter(item) ". ";
       color: red;
     }
@@ -119,10 +119,10 @@
     margin-top:5px;
   }
 
-  .big-letter-red {
+  .bigLetterRed {
     @include big-letter(60px, $red-color, 45px, 50%)
   }
-  .big-letter-gray {
+  .bigLetterGray {
     @include big-letter(42px, $gray-color, 32px, 0)
   }
 
