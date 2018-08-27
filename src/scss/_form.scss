@@ -1,0 +1,11 @@
+.form {
+    @extend %section;
+    input, textarea {
+        border-radius: 0;
+    }
+    button {
+        width: 100%;
+        background: transparent;
+        border: 2px solid $red-color;
+    }
+}
