@@ -40,7 +40,8 @@ gulp.task('js', function() {
 gulp.task('serve', ['sass','fonts','css'], function() {
 
     browserSync.init({
-        server: "./src"
+        server: "./src",
+        port: 4545
     });
 
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass']);

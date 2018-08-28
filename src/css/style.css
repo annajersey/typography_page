@@ -410,38 +410,89 @@ nav.navbar.navbar-light {
     padding-top: 3px;
     display: block; }
 
-.form input, .form textarea {
-  border-radius: 0; }
+.form form input {
+  height: 45px; }
 
-.form button {
+.form form textarea {
+  height: 150px;
+  padding-top: 15px; }
+
+.form form input, .form form textarea {
+  border-radius: 0;
+  color: #888;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  font-weight: 600; }
+
+.form form button {
+  height: 45px;
   width: 100%;
   background: transparent;
-  border: 2px solid #e24545; }
+  border: 2px solid #e24545;
+  text-transform: uppercase; }
+
+.form .radios label input {
+  display: none; }
+
+.form .radios label {
+  color: #777;
+  font-size: 13px; }
+  .form .radios label span {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+    margin-right: 4px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%; }
+
+.form .radios input:checked + span {
+  display: inline-block; }
+
+.form .radios input:checked + span:after {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #444;
+  border-radius: 50%; }
+
+.form .radios .plainRadio label span {
+  box-shadow: inset 2px 2px 1px #ddd; }
+
+.form .radios .redRadio label span {
+  background: #e24545;
+  border-color: #e24545; }
+
+.form .radios .redRadio input:checked + span:after {
+  background: #fff; }
+
+.form .radios .whiteRadio input:checked + span:after {
+  background: #e24545; }
 
 .form .checkboxes {
+  font-weight: 600;
+  margin-bottom: 25px;
   /*--------   checkboxes  start  ------------*/
   /*--------  checkboxes end   -----------*/ }
-  .form .checkboxes input[type=checkbox] {
-    width: 22px;
-    height: 22px;
-    border-radius: 0;
-    background: red; }
   .form .checkboxes label input {
     display: none; }
-  .form .checkboxes label span {
-    width: 22px;
-    height: 22px;
-    border: 0;
-    display: inline-block;
-    position: relative; }
-  .form .checkboxes .redCheckbox label span {
-    background-color: #e24545; }
-  .form .checkboxes .darkCheckbox label span {
-    background-color: #444; }
-  .form .checkboxes .plainCheckbox label span {
-    background: #fff;
-    box-shadow: inset 2px 2px 7px #eee;
-    border: 1px solid #ccc; }
+  .form .checkboxes label {
+    color: #777;
+    font-size: 13px; }
+    .form .checkboxes label span {
+      width: 22px;
+      height: 22px;
+      border: 0;
+      display: inline-block;
+      position: relative;
+      vertical-align: bottom;
+      margin-right: 4px; }
   .form .checkboxes [type=checkbox]:checked + span {
     display: inline-block; }
   .form .checkboxes [type=checkbox]:checked + span:after {
@@ -455,3 +506,13 @@ nav.navbar.navbar-light {
     border: solid #fff;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg); }
+  .form .checkboxes .redCheckbox label span {
+    background-color: #e24545; }
+  .form .checkboxes .darkCheckbox label span {
+    background-color: #444; }
+  .form .checkboxes .plainCheckbox label span {
+    background: #fff;
+    box-shadow: inset 2px 2px 7px #eee;
+    border: 1px solid #ccc; }
+  .form .checkboxes .plainCheckbox [type=checkbox]:checked + span:after {
+    border-color: #444; }
