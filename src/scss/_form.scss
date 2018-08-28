@@ -1,6 +1,7 @@
 .form {
     @extend %section;
     form {
+        margin-bottom: 20px;
         input{
             height:45px;
         }
@@ -22,6 +23,9 @@
             background: transparent;
             border: 2px solid $red-color;
             text-transform:uppercase;
+            color:#222;
+            font-weight:bold;
+            letter-spacing: 2px;
         }
     }
     .radios{
@@ -80,7 +84,7 @@
     }
     .checkboxes{
         font-weight: 600;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
         /*--------   checkboxes  start  ------------*/
         label input {
             display: none;
