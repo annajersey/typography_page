@@ -517,9 +517,7 @@ nav.navbar.navbar-light {
 
 .form .checkboxes {
   font-weight: 600;
-  margin-bottom: 35px;
-  /*--------   checkboxes  start  ------------*/
-  /*--------  checkboxes end   -----------*/ }
+  margin-bottom: 35px; }
   .form .checkboxes label input {
     display: none; }
   .form .checkboxes label {

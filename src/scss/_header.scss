@@ -34,14 +34,14 @@
 nav.navbar.navbar-light {
     padding: 32px 0;
     background: $white-color;
-    .container{
-        position:relative;
+    .container {
+        position: relative;
     }
     .navbar-nav {
         margin-right: 45px;
     }
-    .navbar-toggler{
-        margin-left:auto;
+    .navbar-toggler {
+        margin-left: auto;
     }
     .mini-cart {
         border: 2px solid $gray-color;
@@ -69,11 +69,11 @@ nav.navbar.navbar-light {
             line-height: 20px;
             border: 5px solid $white-color;
         }
-        @include md(){
-            position:absolute;
+        @include md() {
+            position: absolute;
             margin-left: 300px;
-            left:0;
-            top:0px;
+            left: 0;
+            top: 0px;
         }
         @include sm() {
             margin-left: 200px;

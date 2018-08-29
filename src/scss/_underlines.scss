@@ -1,112 +1,110 @@
 .underlines {
-  @extend %section;
-  padding-top: 75px;
-  h3 {
-    color: #222;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  .redLine {
-    width: 30px;
-    height: 4px;
-    background: $red-color;
-    margin-bottom: 40px;
+    @extend %section;
+    padding-top: 75px;
+    h3 {
+        color: #222;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .redLine {
+        width: 30px;
+        height: 4px;
+        background: $red-color;
+        margin-bottom: 40px;
 
-  }
-  p {
-    line-height: 23px;
-
-  }
-  .col-md-6 p {
-    line-height: 32px;
-  }
-  .hightligt-red {
-    background: $red-color;
-    color: $white-color
-  }
-  .hightligt-gray {
-    background: $gray-color;
-    color: $white-color
-  }
-  .hightligt-dotted {
-    border: 1px dotted #777
-  }
-  span[class^="hightligt-"] {
-    padding: 5px;
-    margin: 0 5px;
-  }
+    }
+    p {
+        line-height: 23px;
+    }
+    .col-md-6 p {
+        line-height: 32px;
+    }
+    .hightligt-red {
+        background: $red-color;
+        color: $white-color
+    }
+    .hightligt-gray {
+        background: $gray-color;
+        color: $white-color
+    }
+    .hightligt-dotted {
+        border: 1px dotted #777
+    }
+    span[class^="hightligt-"] {
+        padding: 5px;
+        margin: 0 5px;
+    }
 }
 
 @mixin tooltip(
-  $tooltip-background-color: black
+    $tooltip-background-color: black
 ) {
-  $tooltip-arrow-base: 1em;
-  $tooltip-arrow-length: .5em;
-  $tooltip-transition-out-duration: .2;
-  // Sizing and positioning
-  box-sizing: border-box;
-  position: absolute;
-  left: 50%;
-  bottom: 100%; // displayed on top
-  margin-bottom: $tooltip-arrow-length+0.3em;
-
-  // Text and color properties.
-  background-color: $tooltip-background-color;
-  text-align: center;
-  font-size: 10px;
-  font-weight: normal;
-  white-space: nowrap;
-  // Animated properties.
-  visibility: hidden;
-  opacity: 0;
-  transform: translate(-50%, $tooltip-arrow-length);
-  transition: visibility 0s linear $tooltip-transition-out-duration,
-  opacity $tooltip-transition-out-duration ease-in 0s,
-  transform $tooltip-transition-out-duration ease-in 0s;
-
-  &::after {
-    content: "";
+    $tooltip-arrow-base: 1em;
+    $tooltip-arrow-length: .5em;
+    $tooltip-transition-out-duration: .2;
+    // Sizing and positioning
+    box-sizing: border-box;
     position: absolute;
-    top: 100%;
     left: 50%;
-    width: 0;
-    height: 0;
-    // Draw a triangle.
-    border-top: ($tooltip-arrow-length) solid $tooltip-background-color;
-    border-left: ($tooltip-arrow-base / 2) solid transparent;
-    border-right: ($tooltip-arrow-base / 2) solid transparent;
-    // Center the triangle.
-    margin-left: (- $tooltip-arrow-base / 2);
-  }
+    bottom: 100%; // displayed on top
+    margin-bottom: $tooltip-arrow-length+0.3em;
+
+    // Text and color properties.
+    background-color: $tooltip-background-color;
+    text-align: center;
+    font-size: 10px;
+    font-weight: normal;
+    white-space: nowrap;
+    // Animated properties.
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, $tooltip-arrow-length);
+    transition: visibility 0s linear $tooltip-transition-out-duration,
+    opacity $tooltip-transition-out-duration ease-in 0s,
+    transform $tooltip-transition-out-duration ease-in 0s;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        // Draw a triangle.
+        border-top: ($tooltip-arrow-length) solid $tooltip-background-color;
+        border-left: ($tooltip-arrow-base / 2) solid transparent;
+        border-right: ($tooltip-arrow-base / 2) solid transparent;
+        // Center the triangle.
+        margin-left: (- $tooltip-arrow-base / 2);
+    }
 
 }
 
 .tooltip-up {
-  min-width: 10em;
-  padding: .5em .75em;
-  box-shadow: 0 .05em .15em rgba(black, .1);
-  color: $white-color;
-  &.red {
-    @include tooltip($tooltip-background-color: $red-color);
-  }
-  &.gray {
-    @include tooltip($tooltip-background-color: $gray-color)
-  }
+    min-width: 10em;
+    padding: .5em .75em;
+    box-shadow: 0 .05em .15em rgba(black, .1);
+    color: $white-color;
+    &.red {
+        @include tooltip($tooltip-background-color: $red-color);
+    }
+    &.gray {
+        @include tooltip($tooltip-background-color: $gray-color)
+    }
 }
 
 .has-tooltip {
-  font-weight: bold;
-  position: relative;
-  cursor: pointer;
-  // Display the tooltip on hover and on focus.
-  &:hover, &:focus {
-    .tooltip-up {
-      visibility: visible;
-      opacity: 1;
-      transform: translate(-50%, 0); // horizontally centered
-      transition: visibility 0s linear 0s,
-      opacity .3s ease-out 0s,
-      transform .3s ease-out 0s;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    &:hover, &:focus {
+        .tooltip-up {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, 0);
+            transition: visibility 0s linear 0s,
+            opacity .3s ease-out 0s,
+            transform .3s ease-out 0s;
+        }
     }
-  }
 }

@@ -64,9 +64,9 @@ i.fas {
 }
 
 .container {
-@include sm() {
-    margin: 0 10px;
-}
+    @include sm() {
+        margin: 0 10px;
+    }
 }
 
 @import "header";

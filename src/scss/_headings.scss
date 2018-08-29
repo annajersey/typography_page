@@ -1,27 +1,27 @@
 .headings {
-  @extend %section;
-  .row * {
-    align-self: center !important;
-  }
-  .col-red {
-    color: $red-color;
-    font-size: 15px;
-    font-family: $font-sans;
-    font-weight: bold;
-    text-align: center;
-  }
+    @extend %section;
+    .row * {
+        align-self: center !important;
+    }
+    .col-red {
+        color: $red-color;
+        font-size: 15px;
+        font-family: $font-sans;
+        font-weight: bold;
+        text-align: center;
+    }
 
-  @for $i from 1 through 6 {
-    h#{$i} {
-      margin: 22px 0;
-      display: inline-block;
+    @for $i from 1 through 6 {
+        h#{$i} {
+            margin: 22px 0;
+            display: inline-block;
+        }
+        .col-md-5:first-child h#{$i} {
+            font-weight: bold;
+        }
+        .col-bold h#{$i} {
+            font-weight: bold;
+        }
     }
-    .col-md-5:first-child h#{$i} {
-      font-weight: bold;
-    }
-    .col-bold h#{$i} {
-      font-weight: bold;
-    }
-  }
 
 }
