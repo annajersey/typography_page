@@ -1,96 +1,126 @@
 /* ----------------- Top panel --------------------- */
 .topPanel {
-  height: 40px;
-  line-height: 20px;
-  width: 100%;
-  color: $white-color;
-  background: #222;
-  padding: 10px 0;
-  .topPanelItem {
-    float: left;
-    padding: 0 20px;
-    text-align: center;
-    font-size: 11px;
-    border-left: 1px solid $gray-color;
-    cursor: pointer;
-    &:last-child {
-      border-right: 1px solid $gray-color;
+    height: 40px;
+    line-height: 20px;
+    width: 100%;
+    color: $white-color;
+    background: #222;
+    padding: 10px 0;
+    .topPanelItem {
+        float: left;
+        padding: 0 20px;
+        text-align: center;
+        font-size: 11px;
+        border-left: 1px solid $gray-color;
+        cursor: pointer;
+        &:last-child {
+            border-right: 1px solid $gray-color;
+        }
+        span {
+            padding: 0 7px;
+        }
+        img {
+            vertical-align: text-top
+        }
     }
-    span {
-      padding: 0 7px;
+    .floatRight {
+        @include sm {
+            display: none
+        }
     }
-    img {
-      vertical-align: text-top
-    }
-  }
-  .floatRight {
-    @include sm {
-      display: none
-    }
-  }
 }
 
 /* -----------------  Navbar  --------------------- */
 nav.navbar.navbar-light {
-  padding: 32px 0;
-  background: $white-color;
-  .navbar-nav {
-    margin-right: 45px;
-  }
-  .mini-cart {
-    border: 2px solid $gray-color;
-    width: 140px;
-    height: 42px;
-    line-height: 42px;
-    text-align: center;
-    background: url("../img/mini-cart.gif") no-repeat 15px center;
-    font-size: 15px;
-    font-weight: bold;
-    padding-left: 14px;
-    position: relative;
-    #num-items {
-      width: 30px;
-      height: 30px;
-      background: $gray-color;
-      border-radius: 50%;
-      color: $white-color;
-      position: absolute;
-      right: -15px;
-      top: 5px;
-      font-size: 11px;
-      font-weight: normal;
-      text-align: center;
-      line-height: 20px;
-      border: 5px solid $white-color;
+    padding: 32px 0;
+    background: $white-color;
+    .container{
+        position:relative;
     }
-  }
-  .nav-item {
-    &.active {
-      a {
-        color: $red-color;
-      }
-      a::first-letter {
-        border-bottom: 2px solid $red-color;
-        padding-bottom: 4px;
-      }
+    .navbar-nav {
+        margin-right: 45px;
     }
-    &.last {
-      margin-left: 4px;
+    .navbar-toggler{
+        margin-left:auto;
     }
-  }
+    .mini-cart {
+        border: 2px solid $gray-color;
+        width: 140px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        background: url("../img/mini-cart.gif") no-repeat 15px center;
+        font-size: 15px;
+        font-weight: bold;
+        padding-left: 14px;
+        position: relative;
+        #num-items {
+            width: 30px;
+            height: 30px;
+            background: $gray-color;
+            border-radius: 50%;
+            color: $white-color;
+            position: absolute;
+            right: -15px;
+            top: 5px;
+            font-size: 11px;
+            font-weight: normal;
+            text-align: center;
+            line-height: 20px;
+            border: 5px solid $white-color;
+        }
+        @include md(){
+            position:absolute;
+            margin-left: 300px;
+            left:0;
+            top:0px;
+        }
+        @include sm() {
+            margin-left: 200px;
+        }
+    }
+    .nav-item {
+        &.active {
+            a {
+                color: $red-color;
+            }
+            a::first-letter {
+                border-bottom: 2px solid $red-color;
+                padding-bottom: 4px;
+            }
+        }
+        &.last {
+            margin-left: 4px;
+        }
+    }
 
-  .nav-link {
-    font-weight: bold;
-    color: $gray-color;
-    text-transform: uppercase;
-    font-size: 13px;
-    .fa-angle-down {
-      margin-left: 4px;
+    .nav-link {
+        font-weight: bold;
+        color: $gray-color;
+        text-transform: uppercase;
+        font-size: 13px;
+        .fa-angle-down {
+            margin-left: 4px;
+        }
     }
-  }
-  .dropdown-menu{
-    border-radius:0;
-  }
+    .dropdown-menu {
+        border-radius: 0;
+        width: 120px;
+
+        .dropdown-item {
+            font-size: 12px;
+            font-family: $font-stack;
+            padding: 3px 10px;
+            &:hover {
+                color: $gray-color;
+                border: 0;
+            }
+            &:focus {
+                background: 0;
+                border: 0;
+            }
+        }
+    }
 }
 
 

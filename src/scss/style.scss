@@ -7,59 +7,66 @@ $bg-color: $white-color;
 $font-stack: 'Montserrat', sans-serif;
 $font-sans: 'Open Sans', sans-serif;
 $screen-sm-max: 768px;
-$screen-md-max: 1200px;
+$screen-md-max: 992px;
 @mixin sm {
-  @media (max-width: #{$screen-sm-max}) {
-    @content;
-  }
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
 }
 
 @mixin md {
-  @media (max-width: #{$screen-md-max}) {
-    @content;
-  }
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
 }
 
 body {
-  background: $bg-color;
-  font-family: $font-stack;
-  color: $gray-color;
-  margin-bottom: 50px;
-  font-size: 12px;
-  font-weight: 500;
+    background: $bg-color;
+    font-family: $font-stack;
+    color: $gray-color;
+    margin-bottom: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 576px
 }
 
 .red {
-  color: $red-color
+    color: $red-color
 }
 
 .blue {
-  color: #0897c5
+    color: #0897c5
 }
 
 .orange {
-  color: #ff750b
+    color: #ff750b
 }
 
 i.fas {
-  font-family: 'FontAwesome';
-  font-style: normal;
+    font-family: 'FontAwesome';
+    font-style: normal;
 }
 
 .title {
-  font-family: $font-sans;
-  font-size: 30px;
-  font-weight: 300;
-  margin-top: 67px;
-  margin-bottom: 40px;
-  color:#777;
+    font-family: $font-sans;
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 67px;
+    margin-bottom: 40px;
+    color: #777;
 }
 
 %section {
-  border-top: 1px solid $light-gray-color;
-  border-bottom: 1px solid $light-gray-color;
-  padding-bottom: 55px;
-  margin-top: 3px;
+    border-top: 1px solid $light-gray-color;
+    border-bottom: 1px solid $light-gray-color;
+    padding-bottom: 55px;
+    margin-top: 3px;
+}
+
+.container {
+@include sm() {
+    margin: 0 10px;
+}
 }
 
 @import "header";
