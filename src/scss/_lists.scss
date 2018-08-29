@@ -1,132 +1,132 @@
 .lists {
-    @extend %section;
-    ul, ol {
-        margin: 0 0 40px 0;
-        padding: 0;
-        list-style: none;
-        line-height: 28px;
+  @extend %section;
+  ul, ol {
+    margin: 0 0 40px 0;
+    padding: 0;
+    list-style: none;
+    line-height: 28px;
+  }
+  ul {
+    li:before {
+      font-family: 'FontAwesome';
+      width: 30px;
+      font-size: 14px;
+      display: inline-block;
     }
-    ul {
-        li:before {
-            font-family: 'FontAwesome';
-            width: 30px;
-            font-size: 14px;
-            display: inline-block;
-        }
-        &.checkMark {
-            li:before {
-                content: "\f00c";
-            }
-            li:nth-child(4):before {
-                content: "\f00d";
-                color: $red-color;
-            }
-        }
-        &.angleRight li:before {
-            content: "\f105";
-            font-size: 17px;
-            color: $red-color;
-            font-weight: bold;
-        }
-        &.checkSquare {
-            li:before {
-                content: "\f14a";
-                color: $red-color;
-                font-size: 17px;
-            }
-            li:nth-child(4):before {
-                content: "\f00d";
-                color: $white-color;
-                padding: 0px;
-                vertical-align: middle;
-                background: $red-color;
-                font-weight: normal;
-                font-size: 10px;
-                text-align: center;
-                border-radius: 3px;
-                width: 15px;
-                margin-right: 15px;
-                height: 15px;
-                line-height: 14px;
-            }
-        }
-        &.heart li:before {
-            content: "\f08a";
-            color: $red-color;
-        }
-        &.longArrow li:before {
-            content: "\f178";
-            color: $red-color;
-
-        }
-        &.checkCircle li:before {
-            content: "\f05d";
-            font-size: 16px;
-        }
-        &.circle li:before {
-            content: "\f111";
-            font-size: 9px;
-        }
+    &.checkMark {
+      li:before {
+        content: "\f00c";
+      }
+      li:nth-child(4):before {
+        content: "\f00d";
+        color: $red-color;
+      }
     }
-
-    ol {
-        counter-reset: item;
-        li {
-            display: block;
-        }
-        li:before {
-            width: 30px;
-            counter-increment: item;
-            font-size: 14px;
-            display: inline-block;
-        }
-
-        &.redNumbers li:before {
-            content: counter(item) ". ";
-            color: red;
-        }
-        &.circles li:before {
-            content: counter(item);
-            color: $white-color;
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            line-height: 15px;
-            background: $gray-color;
-            font-weight: normal;
-            font-size: 11px;
-            text-align: center;
-            border-radius: 50%;
-            margin-right: 20px;
-
-        }
+    &.angleRight li:before {
+      content: "\f105";
+      font-size: 17px;
+      color: $red-color;
+      font-weight: bold;
     }
-
-    @mixin big-letter(
-        $size, $background, $font-size, $border-radius
-    ) {
-        width: $size;
-        height: $size;
-        background: $background;
+    &.checkSquare {
+      li:before {
+        content: "\f14a";
+        color: $red-color;
+        font-size: 17px;
+      }
+      li:nth-child(4):before {
+        content: "\f00d";
         color: $white-color;
-        font-size: $font-size;
+        padding: 0px;
+        vertical-align: middle;
+        background: $red-color;
+        font-weight: normal;
+        font-size: 10px;
         text-align: center;
-        border-radius: $border-radius;
-        float: left;
-        font-weight: bold;
-        line-height: $size;
+        border-radius: 3px;
+        width: 15px;
         margin-right: 15px;
-        margin-top: 5px;
+        height: 15px;
+        line-height: 14px;
+      }
+    }
+    &.heart li:before {
+      content: "\f08a";
+      color: $red-color;
+    }
+    &.longArrow li:before {
+      content: "\f178";
+      color: $red-color;
+
+    }
+    &.checkCircle li:before {
+      content: "\f05d";
+      font-size: 16px;
+    }
+    &.circle li:before {
+      content: "\f111";
+      font-size: 9px;
+    }
+  }
+
+  ol {
+    counter-reset: item;
+    li {
+      display: block;
+    }
+    li:before {
+      width: 30px;
+      counter-increment: item;
+      font-size: 14px;
+      display: inline-block;
     }
 
-    .bigLetterRed {
-        @include big-letter(60px, $red-color, 45px, 50%)
+    &.redNumbers li:before {
+      content: counter(item) ". ";
+      color: red;
     }
-    .bigLetterGray {
-        @include big-letter(42px, $gray-color, 32px, 0)
-    }
+    &.circles li:before {
+      content: counter(item);
+      color: $white-color;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      background: $gray-color;
+      font-weight: normal;
+      font-size: 11px;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 20px;
 
-    p.first {
-        margin-bottom: 22px;
     }
+  }
+
+  @mixin big-letter(
+    $size, $background, $font-size, $border-radius
+  ) {
+    width: $size;
+    height: $size;
+    background: $background;
+    color: $white-color;
+    font-size: $font-size;
+    text-align: center;
+    border-radius: $border-radius;
+    float: left;
+    font-weight: bold;
+    line-height: $size;
+    margin-right: 15px;
+    margin-top:5px;
+  }
+
+  .bigLetterRed {
+    @include big-letter(60px, $red-color, 45px, 50%)
+  }
+  .bigLetterGray {
+    @include big-letter(42px, $gray-color, 32px, 0)
+  }
+
+  p.first{
+    margin-bottom:22px;
+  }
 }
