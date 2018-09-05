@@ -25,8 +25,7 @@ gulp.task('fonts', function () {
 // Move the javascript files into src
 gulp.task('js', function () {
     return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest("src/js"))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest("src/js"));
 });
 gulp.task('serve', ['sass', 'fonts', 'css'], function () {
     browserSync.init({
