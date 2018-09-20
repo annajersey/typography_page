@@ -84,7 +84,7 @@ nav.navbar.navbar-light {
     font-weight: bold;
     padding-left: 14px;
     position: relative; }
-    nav.navbar.navbar-light .mini-cart #num-items {
+    nav.navbar.navbar-light .mini-cart .num-items {
       width: 30px;
       height: 30px;
       background: #444;
