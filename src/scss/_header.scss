@@ -13,10 +13,18 @@
         font-size: 11px;
         border-left: 1px solid $gray-color;
         cursor: pointer;
+        position:relative;
+        text-transform:uppercase;
+        &.currency{
+            width:87px;
+        }
+        &.profile{
+            width:150px;
+        }
         &:last-child {
             border-right: 1px solid $gray-color;
         }
-        span {
+        a.menuLinks,span {
             padding: 0 7px;
         }
         img {
@@ -119,6 +127,26 @@ nav.navbar.navbar-light {
                 background: 0;
                 border: 0;
             }
+        }
+    }
+}
+
+.topPanelItem .dropDownMenu{
+    display:none;
+    position:absolute;
+    background: #222;
+    width:100%;
+    margin-left:-20px;
+    z-index:3;
+    margin-top:9px;
+    text-transform:uppercase;
+    div,a{
+        color:#fff;
+        display:block;
+        padding:3px 0;
+        &:hover{
+            background:#fff;
+            color: #000;
         }
     }
 }

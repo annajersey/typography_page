@@ -52,10 +52,16 @@ i.fas {
     text-align: center;
     font-size: 11px;
     border-left: 1px solid #444;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase; }
+    .topPanel .topPanelItem.currency {
+      width: 87px; }
+    .topPanel .topPanelItem.profile {
+      width: 150px; }
     .topPanel .topPanelItem:last-child {
       border-right: 1px solid #444; }
-    .topPanel .topPanelItem span {
+    .topPanel .topPanelItem a.menuLinks, .topPanel .topPanelItem span {
       padding: 0 7px; }
     .topPanel .topPanelItem img {
       vertical-align: text-top; }
@@ -134,6 +140,23 @@ nav.navbar.navbar-light {
       nav.navbar.navbar-light .dropdown-menu .dropdown-item:focus {
         background: 0;
         border: 0; }
+
+.topPanelItem .dropDownMenu {
+  display: none;
+  position: absolute;
+  background: #222;
+  width: 100%;
+  margin-left: -20px;
+  z-index: 3;
+  margin-top: 9px;
+  text-transform: uppercase; }
+  .topPanelItem .dropDownMenu div, .topPanelItem .dropDownMenu a {
+    color: #fff;
+    display: block;
+    padding: 3px 0; }
+    .topPanelItem .dropDownMenu div:hover, .topPanelItem .dropDownMenu a:hover {
+      background: #fff;
+      color: #000; }
 
 .headings .row * {
   align-self: center !important; }
