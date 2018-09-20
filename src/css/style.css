@@ -145,64 +145,46 @@ nav.navbar.navbar-light {
   font-weight: bold;
   text-align: center; }
 
-.headings h1 {
+h1 {
   margin: 22px 0;
   display: inline-block; }
 
-.headings .col-md-5:first-child h1 {
+h1.bold {
   font-weight: bold; }
 
-.headings .col-bold h1 {
-  font-weight: bold; }
-
-.headings h2 {
+h2 {
   margin: 22px 0;
   display: inline-block; }
 
-.headings .col-md-5:first-child h2 {
+h2.bold {
   font-weight: bold; }
 
-.headings .col-bold h2 {
-  font-weight: bold; }
-
-.headings h3 {
+h3 {
   margin: 22px 0;
   display: inline-block; }
 
-.headings .col-md-5:first-child h3 {
+h3.bold {
   font-weight: bold; }
 
-.headings .col-bold h3 {
-  font-weight: bold; }
-
-.headings h4 {
+h4 {
   margin: 22px 0;
   display: inline-block; }
 
-.headings .col-md-5:first-child h4 {
+h4.bold {
   font-weight: bold; }
 
-.headings .col-bold h4 {
-  font-weight: bold; }
-
-.headings h5 {
+h5 {
   margin: 22px 0;
   display: inline-block; }
 
-.headings .col-md-5:first-child h5 {
+h5.bold {
   font-weight: bold; }
 
-.headings .col-bold h5 {
-  font-weight: bold; }
-
-.headings h6 {
+h6 {
   margin: 22px 0;
   display: inline-block; }
 
-.headings .col-md-5:first-child h6 {
-  font-weight: bold; }
-
-.headings .col-bold h6 {
+h6.bold {
   font-weight: bold; }
 
 .underlines {

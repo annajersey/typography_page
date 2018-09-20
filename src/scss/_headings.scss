@@ -10,18 +10,13 @@
         font-weight: bold;
         text-align: center;
     }
-
-    @for $i from 1 through 6 {
-        h#{$i} {
-            margin: 22px 0;
-            display: inline-block;
-        }
-        .col-md-5:first-child h#{$i} {
-            font-weight: bold;
-        }
-        .col-bold h#{$i} {
-            font-weight: bold;
-        }
+}
+@for $i from 1 through 6 {
+    h#{$i} {
+        margin: 22px 0;
+        display: inline-block;
     }
-
+    h#{$i}.bold {
+        font-weight: bold;
+    }
 }
