@@ -170,42 +170,48 @@ nav.navbar.navbar-light {
 
 h1 {
   margin: 22px 0;
-  display: inline-block; }
+  display: inline-block;
+  word-break: break-all; }
 
 h1.bold {
   font-weight: bold; }
 
 h2 {
   margin: 22px 0;
-  display: inline-block; }
+  display: inline-block;
+  word-break: break-all; }
 
 h2.bold {
   font-weight: bold; }
 
 h3 {
   margin: 22px 0;
-  display: inline-block; }
+  display: inline-block;
+  word-break: break-all; }
 
 h3.bold {
   font-weight: bold; }
 
 h4 {
   margin: 22px 0;
-  display: inline-block; }
+  display: inline-block;
+  word-break: break-all; }
 
 h4.bold {
   font-weight: bold; }
 
 h5 {
   margin: 22px 0;
-  display: inline-block; }
+  display: inline-block;
+  word-break: break-all; }
 
 h5.bold {
   font-weight: bold; }
 
 h6 {
   margin: 22px 0;
-  display: inline-block; }
+  display: inline-block;
+  word-break: break-all; }
 
 h6.bold {
   font-weight: bold; }
@@ -216,11 +222,13 @@ h6.bold {
     color: #222;
     text-transform: uppercase;
     font-weight: bold; }
-  .underlines .redLine {
-    width: 30px;
-    height: 4px;
-    background: #e24545;
-    margin-bottom: 40px; }
+    .underlines h3:after {
+      width: 30px;
+      height: 4px;
+      background: #e24545;
+      margin-bottom: 40px;
+      display: block;
+      content: ''; }
   .underlines p {
     line-height: 23px; }
   .underlines .col-md-6 p {
@@ -305,37 +313,62 @@ h6.bold {
     transform: translate(-50%, 0);
     transition: visibility 0s linear 0s, opacity .3s ease-out 0s, transform .3s ease-out 0s; }
 
-.lists ul, .lists ol {
+.lists .bigLetter {
+  color: #fff;
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  margin-right: 15px;
+  margin-top: 5px; }
+  .lists .bigLetter.red {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #e24545;
+    border-radius: 50%;
+    font-size: 45px; }
+  .lists .bigLetter.gray {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    background: #444;
+    border-radius: 0;
+    font-size: 32px; }
+
+.lists p.first {
+  margin-bottom: 22px; }
+
+ul, ol {
   margin: 0 0 40px 0;
   padding: 0;
   list-style: none;
   line-height: 28px; }
 
-.lists ul li:before {
+ul li:before {
   font-family: 'FontAwesome';
   width: 30px;
   font-size: 14px;
   display: inline-block; }
 
-.lists ul.checkMark li:before {
+ul.checkMark li:before {
   content: "\f00c"; }
 
-.lists ul.checkMark li:nth-child(4):before {
+ul.checkMark li.checked:before {
   content: "\f00d";
   color: #e24545; }
 
-.lists ul.angleRight li:before {
+ul.angleRight li:before {
   content: "\f105";
   font-size: 17px;
   color: #e24545;
   font-weight: bold; }
 
-.lists ul.checkSquare li:before {
+ul.checkSquare li:before {
   content: "\f14a";
   color: #e24545;
   font-size: 17px; }
 
-.lists ul.checkSquare li:nth-child(4):before {
+ul.checkSquare li.checked:before {
   content: "\f00d";
   color: #fff;
   padding: 0px;
@@ -350,35 +383,35 @@ h6.bold {
   height: 15px;
   line-height: 14px; }
 
-.lists ul.heart li:before {
+ul.heart li:before {
   content: "\f08a";
   color: #e24545; }
 
-.lists ul.longArrow li:before {
+ul.longArrow li:before {
   content: "\f178";
   color: #e24545; }
 
-.lists ul.checkCircle li:before {
+ul.checkCircle li:before {
   content: "\f05d";
   font-size: 16px; }
 
-.lists ul.circle li:before {
+ul.circle li:before {
   content: "\f111";
   font-size: 9px; }
 
-.lists ol {
+ol {
   counter-reset: item; }
-  .lists ol li {
+  ol li {
     display: block; }
-  .lists ol li:before {
+  ol li:before {
     width: 30px;
     counter-increment: item;
     font-size: 14px;
     display: inline-block; }
-  .lists ol.redNumbers li:before {
+  ol.redNumbers li:before {
     content: counter(item) ". ";
     color: red; }
-  .lists ol.circles li:before {
+  ol.circles li:before {
     content: counter(item);
     color: #fff;
     display: inline-block;
@@ -391,37 +424,6 @@ h6.bold {
     text-align: center;
     border-radius: 50%;
     margin-right: 20px; }
-
-.lists .bigLetterRed {
-  width: 60px;
-  height: 60px;
-  background: #e24545;
-  color: #fff;
-  font-size: 45px;
-  text-align: center;
-  border-radius: 50%;
-  float: left;
-  font-weight: bold;
-  line-height: 60px;
-  margin-right: 15px;
-  margin-top: 5px; }
-
-.lists .bigLetterGray {
-  width: 42px;
-  height: 42px;
-  background: #444;
-  color: #fff;
-  font-size: 32px;
-  text-align: center;
-  border-radius: 0;
-  float: left;
-  font-weight: bold;
-  line-height: 42px;
-  margin-right: 15px;
-  margin-top: 5px; }
-
-.lists p.first {
-  margin-bottom: 22px; }
 
 .quotes blockquote {
   display: flex;

@@ -15,6 +15,7 @@
     h#{$i} {
         margin: 22px 0;
         display: inline-block;
+        word-break: break-all;
     }
     h#{$i}.bold {
         font-weight: bold;

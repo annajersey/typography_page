@@ -5,14 +5,16 @@
         color: #222;
         text-transform: uppercase;
         font-weight: bold;
+        &:after {
+            width: 30px;
+            height: 4px;
+            background: $red-color;
+            margin-bottom: 40px;
+            display:block;
+            content: '';
+        }
     }
-    .redLine {
-        width: 30px;
-        height: 4px;
-        background: $red-color;
-        margin-bottom: 40px;
 
-    }
     p {
         line-height: 23px;
     }
