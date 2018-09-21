@@ -84,12 +84,14 @@ nav.navbar.navbar-light {
     width: 140px;
     height: 42px;
     line-height: 42px;
-    text-align: center;
-    background: url("../img/mini-cart.gif") no-repeat 15px center;
+    text-align: left;
     font-size: 15px;
     font-weight: bold;
-    padding-left: 14px;
+    padding-left: 15px;
     position: relative; }
+    nav.navbar.navbar-light .mini-cart svg {
+      vertical-align: text-bottom;
+      margin-right: 4px; }
     nav.navbar.navbar-light .mini-cart .num-items {
       width: 30px;
       height: 30px;
@@ -140,6 +142,39 @@ nav.navbar.navbar-light {
       nav.navbar.navbar-light .dropdown-menu .dropdown-item:focus {
         background: 0;
         border: 0; }
+
+.logo {
+  width: 63px;
+  height: 25px;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: right;
+  color: #222222; }
+  .logo:after {
+    background: #e24545;
+    content: '';
+    width: 9px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -1px; }
+
+.logo::first-letter {
+  color: #e24545; }
+
+.littleLogo {
+  width: 63px;
+  height: 10px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 9.4px;
+  text-align: right;
+  color: #444444;
+  margin-top: 9px;
+  margin-left: 1px; }
 
 .topPanelItem .dropDownMenu {
   display: none;
