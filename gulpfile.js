@@ -5,6 +5,8 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var concatCss = require('gulp-concat-css');
+var htmlbuild = require('gulp-htmlbuild');
+
 // Compile sass into CSS & auto-inject
 gulp.task('sass', function () {
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
@@ -27,18 +29,16 @@ gulp.task('fonts', function () {
 });
 // Move the javascript files into src
 gulp.task('js', function () {
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(uglify())
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/jquery/dist/jquery.js'])
         .pipe(gulp.dest("src/js"));
 });
 
 //build tasks
 gulp.task('build-js', function () {
-    return gulp.src(['src/js/*jquery*','src/js/*'])
+    return gulp.src(['src/js/*jquery*','src/js/*bootstrap*','src/js/*dropdown*'])
        .pipe(concat('all.js'))
-        .pipe(uglify())
-
-        .pipe(gulp.dest("public/js"));
+       .pipe(uglify())
+       .pipe(gulp.dest("public/js"));
 });
 gulp.task('build-css', function () {
     return gulp.src('src/css/*.css')
@@ -56,6 +56,20 @@ gulp.task('build-fonts', function () {
         'src/fonts/*'])
         .pipe(gulp.dest('public/fonts/'));
 });
+gulp.task('build-html', function () {
+    return gulp.src(['src/index.html'])
+        .pipe(htmlbuild({
+            js: htmlbuild.preprocess.js(function (block) {
+                block.write('js/all.js');
+                block.end();
+            }),
+            css: htmlbuild.preprocess.css(function (block) {
+                block.write('css/all.css');
+                block.end();
+            })
+        }))
+        .pipe(gulp.dest('public/'));
+});
 //eof build tasks
 
 //server&sync tasks
@@ -70,4 +84,4 @@ gulp.task('serve', ['sass', 'fonts', 'css'], function () {
 
 
 gulp.task('default', ['js', 'serve']);
-gulp.task('build', ['build-js','build-css','build-img','build-fonts']);
+gulp.task('build', ['build-js','build-css','build-img','build-fonts','build-html']);

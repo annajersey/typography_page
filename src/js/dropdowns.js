@@ -1,1 +1,4 @@
-$(".topPanelItem").click(function(){$(this).find(".dropDownMenu").slideToggle("fast")}),$(".currency .dropDownMenu div").click(function(){$(this).parents(".topPanelItem").find("span").text($(this).text())});
+jQuery(".topPanelItem").click(function(){
+    jQuery(this).find(".dropDownMenu").slideToggle("fast")})
+jQuery(".dropDownValue .dropDownMenu div").click(function(){
+    jQuery(this).parents(".topPanelItem").find("span.value").html(jQuery(this).html())});

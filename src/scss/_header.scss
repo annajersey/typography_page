@@ -22,14 +22,18 @@
         &.profile {
             width: 150px;
         }
+        &.lang {
+            width: 110px;
+        }
         &:last-child {
             border-right: 1px solid $gray-color;
         }
-        a.menuLinks, span {
+        a.menuLinks, span.value{
             padding: 0 7px;
         }
         img {
-            vertical-align: text-top
+            vertical-align: text-top;
+            padding-right: 7px;
         }
     }
     .floatRight {
@@ -185,14 +189,15 @@ nav.navbar.navbar-light {
     div, a {
         color: #fff;
         display: block;
-        padding: 3px 0;
         &:hover {
             background: #fff;
             color: #000;
         }
     }
 }
-
+.lang .dropDownMenu{
+    div{ text-align: left; padding-left:27px;}
+}
 
 
 

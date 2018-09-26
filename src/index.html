@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Montserrat:400,500,600,700" rel="stylesheet">
+    <!-- htmlbuild:css -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
 </head>
 <body>
 <header>
     <div class="topPanel">
         <div class="container">
             <div class="floatLeft">
-                <div class="topPanelItem"><img src="img/flag.jpg"><span>ENG</span><i class="fas fa-angle-down"></i>
+                <div class="topPanelItem dropDownValue lang"><span class="value"><img src="img/flag.jpg"><span>ENG</span></span><i class="fas fa-angle-down"></i>
+                    <div class="dropDownMenu">
+                        <div><img src="img/flag2.jpg"><span>FR</span></div>
+                        <div><img src="img/flag.jpg"><span>ENG</span></div>
+                    </div>
                 </div>
-                <div class="topPanelItem currency"><span>USD</span><i class="fas fa-angle-down"></i>
+                <div class="topPanelItem dropDownValue currency"><span class="value">USD</span><i class="fas fa-angle-down"></i>
                     <div class="dropDownMenu">
                         <div>GBP</div>
                         <div>ILS</div>
@@ -25,7 +31,7 @@
                         <div>UAH</div>
                     </div>
                 </div>
-                <div class="topPanelItem profile"><span>MY ACCOUNT</span><i class="fas fa-angle-down"></i>
+                <div class="topPanelItem profile"><span class="value">MY ACCOUNT</span><i class="fas fa-angle-down"></i>
                     <div class="dropDownMenu">
                         <a>Profile</a>
                         <a>Orders</a>
@@ -427,8 +433,10 @@
         </div>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<!-- htmlbuild:js -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
 <script src="js/dropdowns.js"></script>
+<!-- endbuild -->
 </body>
 </html>
