@@ -10,14 +10,11 @@
         p {
             display: block
         }
-        &.quoteRed {
-            div {
-                padding-left: 30px;
-                p {
-                    color: $red-color;
-                }
+        &.quoteRed div {
+            padding-left: 30px;
+            p {
+                color: $red-color;
             }
-
         }
         &.quote {
             border-left: 5px solid $red-color;

@@ -1,0 +1,799 @@
+body {
+    background: #fff;
+    font-family: "Montserrat", sans-serif;
+    color: #444;
+    margin-bottom: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 576px;
+}
+
+.red {
+    color: #e24545;
+}
+
+.blue {
+    color: #0897c5;
+}
+
+.orange {
+    color: #ff750b;
+}
+
+i.fas {
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+
+.title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 67px;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.headings, .underlines, .lists, .quotes, .form {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 55px;
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 0 10px;
+    }
+}
+
+/* ----------------- Top panel --------------------- */
+.topPanel {
+    height: 40px;
+    line-height: 20px;
+    width: 100%;
+    color: #fff;
+    background: #222;
+    padding: 10px 0;
+}
+
+.topPanel .topPanelItem {
+    float: left;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 11px;
+    border-left: 1px solid #444;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.topPanel .topPanelItem.currency {
+    width: 87px;
+}
+
+.topPanel .topPanelItem.profile {
+    width: 150px;
+}
+
+.topPanel .topPanelItem:last-child {
+    border-right: 1px solid #444;
+}
+
+.topPanel .topPanelItem a.menuLinks, .topPanel .topPanelItem span {
+    padding: 0 7px;
+}
+
+.topPanel .topPanelItem img {
+    vertical-align: text-top;
+}
+
+@media (max-width: 768px) {
+    .topPanel .floatRight {
+        display: none;
+    }
+}
+
+/* -----------------  Navbar  --------------------- */
+nav.navbar.navbar-light {
+    padding: 32px 0;
+    background: #fff;
+}
+
+nav.navbar.navbar-light .container {
+    position: relative;
+}
+
+nav.navbar.navbar-light .navbar-nav {
+    margin-right: 45px;
+}
+
+nav.navbar.navbar-light .navbar-toggler {
+    margin-left: auto;
+}
+
+nav.navbar.navbar-light .mini-cart {
+    border: 2px solid #444;
+    width: 140px;
+    height: 42px;
+    line-height: 42px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 15px;
+    position: relative;
+}
+
+nav.navbar.navbar-light .mini-cart svg {
+    vertical-align: text-bottom;
+    margin-right: 4px;
+}
+
+nav.navbar.navbar-light .mini-cart .num-items {
+    width: 30px;
+    height: 30px;
+    background: #444;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 20px;
+    border: 5px solid #fff;
+}
+
+@media (max-width: 992px) {
+    nav.navbar.navbar-light .mini-cart {
+        position: absolute;
+        margin-left: 300px;
+        left: 0;
+        top: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav.navbar.navbar-light .mini-cart {
+        margin-left: 200px;
+    }
+}
+
+nav.navbar.navbar-light .nav-item.active a {
+    color: #e24545;
+}
+
+nav.navbar.navbar-light .nav-item.active a::first-letter {
+    border-bottom: 2px solid #e24545;
+    padding-bottom: 4px;
+}
+
+nav.navbar.navbar-light .nav-item.last {
+    margin-left: 4px;
+}
+
+nav.navbar.navbar-light .nav-link {
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+nav.navbar.navbar-light .nav-link .fa-angle-down {
+    margin-left: 4px;
+}
+
+nav.navbar.navbar-light .dropdown-menu {
+    border-radius: 0;
+    width: 120px;
+}
+
+nav.navbar.navbar-light .dropdown-menu .dropdown-item {
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    padding: 3px 10px;
+}
+
+nav.navbar.navbar-light .dropdown-menu .dropdown-item:hover {
+    color: #444;
+    border: 0;
+}
+
+nav.navbar.navbar-light .dropdown-menu .dropdown-item:focus {
+    background: 0;
+    border: 0;
+}
+
+.logo {
+    width: 63px;
+    height: 25px;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: right;
+    color: #222222;
+}
+
+.logo:after {
+    background: #e24545;
+    content: '';
+    width: 9px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -1px;
+}
+
+.logo::first-letter {
+    color: #e24545;
+}
+
+.littleLogo {
+    width: 63px;
+    height: 10px;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 9.4px;
+    text-align: right;
+    color: #444444;
+    margin-top: 9px;
+    margin-left: 1px;
+}
+
+.topPanelItem .dropDownMenu {
+    display: none;
+    position: absolute;
+    background: #222;
+    width: 100%;
+    margin-left: -20px;
+    z-index: 3;
+    margin-top: 9px;
+    text-transform: uppercase;
+}
+
+.topPanelItem .dropDownMenu div, .topPanelItem .dropDownMenu a {
+    color: #fff;
+    display: block;
+    padding: 3px 0;
+}
+
+.topPanelItem .dropDownMenu div:hover, .topPanelItem .dropDownMenu a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.headings .row * {
+    align-self: center !important;
+}
+
+.headings .col-red {
+    color: #e24545;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    margin: 22px 0;
+    display: inline-block;
+    word-break: break-all;
+}
+
+h1.bold {
+    font-weight: bold;
+}
+
+h2 {
+    margin: 22px 0;
+    display: inline-block;
+    word-break: break-all;
+}
+
+h2.bold {
+    font-weight: bold;
+}
+
+h3 {
+    margin: 22px 0;
+    display: inline-block;
+    word-break: break-all;
+}
+
+h3.bold {
+    font-weight: bold;
+}
+
+h4 {
+    margin: 22px 0;
+    display: inline-block;
+    word-break: break-all;
+}
+
+h4.bold {
+    font-weight: bold;
+}
+
+h5 {
+    margin: 22px 0;
+    display: inline-block;
+    word-break: break-all;
+}
+
+h5.bold {
+    font-weight: bold;
+}
+
+h6 {
+    margin: 22px 0;
+    display: inline-block;
+    word-break: break-all;
+}
+
+h6.bold {
+    font-weight: bold;
+}
+
+.underlines {
+    padding-top: 75px;
+}
+
+.underlines h3 {
+    color: #222;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.underlines h3:after {
+    width: 30px;
+    height: 4px;
+    background: #e24545;
+    margin-bottom: 40px;
+    display: block;
+    content: '';
+}
+
+.underlines p {
+    line-height: 23px;
+}
+
+.underlines .col-md-6 p {
+    line-height: 32px;
+}
+
+.underlines .hightligt-red {
+    background: #e24545;
+    color: #fff;
+}
+
+.underlines .hightligt-gray {
+    background: #444;
+    color: #fff;
+}
+
+.underlines .hightligt-dotted {
+    border: 1px dotted #777;
+}
+
+.underlines span[class^="hightligt-"] {
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.tooltip-up {
+    min-width: 10em;
+    padding: .5em .75em;
+    box-shadow: 0 0.05em 0.15em rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.tooltip-up.red {
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 0.8em;
+    background-color: #e24545;
+    text-align: center;
+    font-size: 10px;
+    font-weight: normal;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0.5em);
+    transition: visibility 0s linear 0.2, opacity 0.2 ease-in 0s, transform 0.2 ease-in 0s;
+}
+
+.tooltip-up.red::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 0.5em solid #e24545;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    margin-left: -0.5em;
+}
+
+.tooltip-up.gray {
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 0.8em;
+    background-color: #444;
+    text-align: center;
+    font-size: 10px;
+    font-weight: normal;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 0.5em);
+    transition: visibility 0s linear 0.2, opacity 0.2 ease-in 0s, transform 0.2 ease-in 0s;
+}
+
+.tooltip-up.gray::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 0.5em solid #444;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    margin-left: -0.5em;
+}
+
+.has-tooltip {
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.has-tooltip:hover .tooltip-up, .has-tooltip:focus .tooltip-up {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: visibility 0s linear 0s,
+    opacity .3s ease-out 0s,
+    transform .3s ease-out 0s;
+}
+
+.lists .bigLetter {
+    color: #fff;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.lists .bigLetter.red {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #e24545;
+    border-radius: 50%;
+    font-size: 45px;
+}
+
+.lists .bigLetter.gray {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    background: #444;
+    border-radius: 0;
+    font-size: 32px;
+}
+
+.lists p.first {
+    margin-bottom: 22px;
+}
+
+ul, ol {
+    margin: 0 0 40px 0;
+    padding: 0;
+    list-style: none;
+    line-height: 28px;
+}
+
+ul li:before {
+    font-family: 'FontAwesome';
+    width: 30px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+ul.checkMark li:before {
+    content: "\f00c";
+}
+
+ul.checkMark li.checked:before {
+    content: "\f00d";
+    color: #e24545;
+}
+
+ul.angleRight li:before {
+    content: "\f105";
+    font-size: 17px;
+    color: #e24545;
+    font-weight: bold;
+}
+
+ul.checkSquare li:before {
+    content: "\f14a";
+    color: #e24545;
+    font-size: 17px;
+}
+
+ul.checkSquare li.checked:before {
+    content: "\f00d";
+    color: #fff;
+    padding: 0px;
+    vertical-align: middle;
+    background: #e24545;
+    font-weight: normal;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 3px;
+    width: 15px;
+    margin-right: 15px;
+    height: 15px;
+    line-height: 14px;
+}
+
+ul.heart li:before {
+    content: "\f08a";
+    color: #e24545;
+}
+
+ul.longArrow li:before {
+    content: "\f178";
+    color: #e24545;
+}
+
+ul.checkCircle li:before {
+    content: "\f05d";
+    font-size: 16px;
+}
+
+ul.circle li:before {
+    content: "\f111";
+    font-size: 9px;
+}
+
+ol {
+    counter-reset: item;
+}
+
+ol li {
+    display: block;
+}
+
+ol li:before {
+    width: 30px;
+    counter-increment: item;
+    font-size: 14px;
+    display: inline-block;
+}
+
+ol.redNumbers li:before {
+    content: counter(item) ". ";
+    color: red;
+}
+
+ol.circles li:before {
+    content: counter(item);
+    color: #fff;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    background: #444;
+    font-weight: normal;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.quotes blockquote {
+    display: flex;
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quotes blockquote {
+        font-size: 20px;
+    }
+}
+
+.quotes blockquote p {
+    display: block;
+}
+
+.quotes blockquote.quoteRed div {
+    padding-left: 30px;
+}
+
+.quotes blockquote.quoteRed div p {
+    color: #e24545;
+}
+
+.quotes blockquote.quote {
+    border-left: 5px solid #e24545;
+}
+
+.quotes blockquote.quote div {
+    padding-left: 57px;
+}
+
+.quotes blockquote .fa-quote-left {
+    display: block;
+    float: left;
+    font-size: 33px;
+}
+
+.quotes blockquote .quoteBy {
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3px;
+    display: block;
+}
+
+.form form {
+    margin-bottom: 20px;
+}
+
+.form form input {
+    height: 45px;
+}
+
+.form form textarea {
+    height: 150px;
+    padding-top: 15px;
+}
+
+.form form input, .form form textarea {
+    border-radius: 0;
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.form form button {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid #e24545;
+    text-transform: uppercase;
+    color: #222;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.form form button:focus {
+    outline: 0;
+}
+
+.radios label input {
+    display: none;
+}
+
+.radios label {
+    color: #777;
+    font-size: 13px;
+}
+
+.radios label span {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+    margin-right: 4px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+}
+
+.radios input:checked + span {
+    display: inline-block;
+}
+
+.radios input:checked + span:after {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #444;
+    border-radius: 50%;
+}
+
+.plainRadio label span {
+    box-shadow: inset 2px 2px 1px #ddd;
+}
+
+.redRadio label span {
+    background: #e24545;
+    border-color: #e24545;
+}
+
+.redRadio input:checked + span:after {
+    background: #fff;
+}
+
+.whiteRadio input:checked + span:after {
+    background: #e24545;
+}
+
+.checkboxes {
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.checkboxes label input {
+    display: none;
+}
+
+.checkboxes label {
+    color: #777;
+    font-size: 13px;
+}
+
+.checkboxes label span {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
+.checkboxes [type=checkbox]:checked + span {
+    display: inline-block;
+}
+
+.checkboxes [type=checkbox]:checked + span:after {
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    content: '';
+    display: block;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.redCheckbox label span {
+    background-color: #e24545;
+}
+
+.darkCheckbox label span {
+    background-color: #444;
+}
+
+.plainCheckbox label span {
+    background: #fff;
+    box-shadow: inset 2px 2px 7px #eee;
+    border: 1px solid #ccc;
+}
+
+.plainCheckbox [type=checkbox]:checked + span:after {
+    border-color: #444;
+}

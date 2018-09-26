@@ -32,117 +32,127 @@
             }
         }
     }
-    .radios {
-        label input {
-            display: none;
-        }
-        label {
-            color: #777;
-            font-size: 13px;
-            span {
-                width: 16px;
-                height: 16px;
-                display: inline-block;
-                position: relative;
-                vertical-align: bottom;
-                margin-right: 4px;
-                border: 1px solid #cdcdcd;
-                border-radius: 50%;
-            }
-        }
-        input:checked + span {
+}
+
+.radios {
+    label input {
+        display: none;
+    }
+    label {
+        color: #777;
+        font-size: 13px;
+        span {
+            width: 16px;
+            height: 16px;
             display: inline-block;
-        }
-
-        input:checked + span:after {
-            position: absolute;
-            left: 3px;
-            top: 3px;
-            content: '';
-            display: block;
-            width: 8px;
-            height: 8px;
-            background: $gray-color;
+            position: relative;
+            vertical-align: bottom;
+            margin-right: 4px;
+            border: 1px solid #cdcdcd;
             border-radius: 50%;
-
-        }
-        .plainRadio {
-            label span {
-                box-shadow: inset 2px 2px 1px #ddd;
-            }
-        }
-        .redRadio {
-            label span {
-                background: $red-color;
-                border-color: $red-color;
-            }
-            input:checked + span:after {
-                background: $white-color;
-            }
-        }
-        .whiteRadio {
-            input:checked + span:after {
-                background: $red-color;
-            }
         }
     }
-    .checkboxes {
-        font-weight: 600;
-        margin-bottom: 35px;
-        label input {
-            display: none;
-        }
-        label {
-            color: #777;
-            font-size: 13px;
-            span {
-                width: 22px;
-                height: 22px;
-                border: 0;
-                display: inline-block;
-                position: relative;
-                vertical-align: bottom;
-                margin-right: 4px;
+    input:checked + span {
+        display: inline-block;
+    }
 
-            }
-        }
+    input:checked + span:after {
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: $gray-color;
+        border-radius: 50%;
 
-        [type=checkbox]:checked + span {
+    }
+
+}
+
+.plainRadio {
+    label span {
+        box-shadow: inset 2px 2px 1px #ddd;
+    }
+}
+
+.redRadio {
+    label span {
+        background: $red-color;
+        border-color: $red-color;
+    }
+    input:checked + span:after {
+        background: $white-color;
+    }
+}
+
+.whiteRadio {
+    input:checked + span:after {
+        background: $red-color;
+    }
+}
+
+.checkboxes {
+    font-weight: 600;
+    margin-bottom: 35px;
+    label input {
+        display: none;
+    }
+    label {
+        color: #777;
+        font-size: 13px;
+        span {
+            width: 22px;
+            height: 22px;
+            border: 0;
             display: inline-block;
-        }
-
-        [type=checkbox]:checked + span:after {
-            position: absolute;
-            left: 8px;
-            top: 5px;
-            content: '';
-            display: block;
-            width: 6px;
-            height: 10px;
-            border: solid #fff;
-            border-width: 0 3px 3px 0;
-            transform: rotate(45deg);
+            position: relative;
+            vertical-align: bottom;
+            margin-right: 4px;
 
         }
-        .redCheckbox {
-            label span {
-                background-color: $red-color;
-            }
-        }
-        .darkCheckbox {
-            label span {
-                background-color: $gray-color;
-            }
-        }
-        .plainCheckbox {
-            label span {
-                background: $white-color;
-                box-shadow: inset 2px 2px 7px $light-gray-color;
-                border: 1px solid #ccc;
-            }
-            [type=checkbox]:checked + span:after {
-                border-color: $gray-color
-            }
-        }
+    }
+
+    [type=checkbox]:checked + span {
+        display: inline-block;
+    }
+
+    [type=checkbox]:checked + span:after {
+        position: absolute;
+        left: 8px;
+        top: 5px;
+        content: '';
+        display: block;
+        width: 6px;
+        height: 10px;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+
+    }
+
+}
+
+.redCheckbox {
+    label span {
+        background-color: $red-color;
+    }
+}
+
+.darkCheckbox {
+    label span {
+        background-color: $gray-color;
+    }
+}
+
+.plainCheckbox {
+    label span {
+        background: $white-color;
+        box-shadow: inset 2px 2px 7px $light-gray-color;
+        border: 1px solid #ccc;
+    }
+    [type=checkbox]:checked + span:after {
+        border-color: $gray-color
     }
 }

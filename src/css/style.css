@@ -514,13 +514,13 @@ ol {
     .form form button:focus {
       outline: 0; }
 
-.form .radios label input {
+.radios label input {
   display: none; }
 
-.form .radios label {
+.radios label {
   color: #777;
   font-size: 13px; }
-  .form .radios label span {
+  .radios label span {
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -530,10 +530,10 @@ ol {
     border: 1px solid #cdcdcd;
     border-radius: 50%; }
 
-.form .radios input:checked + span {
+.radios input:checked + span {
   display: inline-block; }
 
-.form .radios input:checked + span:after {
+.radios input:checked + span:after {
   position: absolute;
   left: 3px;
   top: 3px;
@@ -544,28 +544,28 @@ ol {
   background: #444;
   border-radius: 50%; }
 
-.form .radios .plainRadio label span {
+.plainRadio label span {
   box-shadow: inset 2px 2px 1px #ddd; }
 
-.form .radios .redRadio label span {
+.redRadio label span {
   background: #e24545;
   border-color: #e24545; }
 
-.form .radios .redRadio input:checked + span:after {
+.redRadio input:checked + span:after {
   background: #fff; }
 
-.form .radios .whiteRadio input:checked + span:after {
+.whiteRadio input:checked + span:after {
   background: #e24545; }
 
-.form .checkboxes {
+.checkboxes {
   font-weight: 600;
   margin-bottom: 35px; }
-  .form .checkboxes label input {
+  .checkboxes label input {
     display: none; }
-  .form .checkboxes label {
+  .checkboxes label {
     color: #777;
     font-size: 13px; }
-    .form .checkboxes label span {
+    .checkboxes label span {
       width: 22px;
       height: 22px;
       border: 0;
@@ -573,9 +573,9 @@ ol {
       position: relative;
       vertical-align: bottom;
       margin-right: 4px; }
-  .form .checkboxes [type=checkbox]:checked + span {
+  .checkboxes [type=checkbox]:checked + span {
     display: inline-block; }
-  .form .checkboxes [type=checkbox]:checked + span:after {
+  .checkboxes [type=checkbox]:checked + span:after {
     position: absolute;
     left: 8px;
     top: 5px;
@@ -586,13 +586,17 @@ ol {
     border: solid #fff;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg); }
-  .form .checkboxes .redCheckbox label span {
-    background-color: #e24545; }
-  .form .checkboxes .darkCheckbox label span {
-    background-color: #444; }
-  .form .checkboxes .plainCheckbox label span {
-    background: #fff;
-    box-shadow: inset 2px 2px 7px #eee;
-    border: 1px solid #ccc; }
-  .form .checkboxes .plainCheckbox [type=checkbox]:checked + span:after {
-    border-color: #444; }
+
+.redCheckbox label span {
+  background-color: #e24545; }
+
+.darkCheckbox label span {
+  background-color: #444; }
+
+.plainCheckbox label span {
+  background: #fff;
+  box-shadow: inset 2px 2px 7px #eee;
+  border: 1px solid #ccc; }
+
+.plainCheckbox [type=checkbox]:checked + span:after {
+  border-color: #444; }
