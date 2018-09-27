@@ -1,11 +1,12 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var concatCss = require('gulp-concat-css');
-var htmlbuild = require('gulp-htmlbuild');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const concatCss = require('gulp-concat-css');
+const htmlbuild = require('gulp-htmlbuild');
+const buildDir = 'build';
 
 // Compile sass into CSS & auto-inject
 gulp.task('sass', function () {
@@ -35,26 +36,26 @@ gulp.task('js', function () {
 
 //build tasks
 gulp.task('build-js', function () {
-    return gulp.src(['src/js/*jquery*','src/js/*bootstrap*','src/js/*dropdown*'])
-       .pipe(concat('all.js'))
-       .pipe(uglify())
-       .pipe(gulp.dest("public/js"));
+    return gulp.src(['src/js/*jquery*', 'src/js/*bootstrap*', 'src/js/*dropdown*'])
+        .pipe(concat('all.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(buildDir + "/js"));
 });
 gulp.task('build-css', function () {
-    return gulp.src('src/css/*.css')
+    return gulp.src('src/css/*')
         .pipe(concatCss("all.css"))
         .pipe(cleanCSS())
-        .pipe(gulp.dest("public/css"));
+        .pipe(gulp.dest(buildDir + "/css"));
 });
 gulp.task('build-img', function () {
     return gulp.src([
         'src/img/*'])
-        .pipe(gulp.dest('public/img'));
+        .pipe(gulp.dest(buildDir + '/img'));
 });
 gulp.task('build-fonts', function () {
     return gulp.src([
         'src/fonts/*'])
-        .pipe(gulp.dest('public/fonts/'));
+        .pipe(gulp.dest(buildDir + '/fonts/'));
 });
 gulp.task('build-html', function () {
     return gulp.src(['src/index.html'])
@@ -68,7 +69,7 @@ gulp.task('build-html', function () {
                 block.end();
             })
         }))
-        .pipe(gulp.dest('public/'));
+        .pipe(gulp.dest(buildDir + '/'));
 });
 //eof build tasks
 
@@ -84,4 +85,4 @@ gulp.task('serve', ['sass', 'fonts', 'css'], function () {
 
 
 gulp.task('default', ['js', 'serve']);
-gulp.task('build', ['build-js','build-css','build-img','build-fonts','build-html']);
+gulp.task('build', ['build-js', 'build-css', 'build-img', 'build-fonts', 'build-html']);
