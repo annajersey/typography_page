@@ -36,12 +36,12 @@ gulp.task('js', function () {
 
 //build tasks
 gulp.task('build-js', function () {
-    return gulp.src(['src/js/*jquery*', 'src/js/*bootstrap*', 'src/js/*dropdown*'])
+    return gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'src/js/*dropdown*'])
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(gulp.dest(buildDir + "/js"));
 });
-gulp.task('build-css', function () {
+gulp.task('build-css',['sass','css'], function () {
     return gulp.src('src/css/*')
         .pipe(concatCss("all.css"))
         .pipe(cleanCSS())
@@ -52,7 +52,7 @@ gulp.task('build-img', function () {
         'src/img/*'])
         .pipe(gulp.dest(buildDir + '/img'));
 });
-gulp.task('build-fonts', function () {
+gulp.task('build-fonts', ['fonts'],function () {
     return gulp.src([
         'src/fonts/*'])
         .pipe(gulp.dest(buildDir + '/fonts/'));
@@ -85,4 +85,4 @@ gulp.task('serve', ['sass', 'fonts', 'css'], function () {
 
 
 gulp.task('default', ['js', 'serve']);
-gulp.task('build', ['build-js', 'build-css', 'build-img', 'build-fonts', 'build-html']);
+gulp.task('build', [ 'build-js', 'build-css', 'build-img', 'build-fonts', 'build-html']);
