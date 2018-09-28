@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
+var webpack = require('webpack');
 module.exports = {
     module: {
         rules: [
@@ -24,6 +25,10 @@ module.exports = {
                 ]
             },
             {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -31,10 +36,6 @@ module.exports = {
                     "postcss-loader",
                     "sass-loader"
                 ]
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -68,10 +69,8 @@ module.exports = {
             chunkFilename: "[id].css"
         }),
         new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            Popper: ['popper.js', 'default'],
+            $: "jquery",
+            jQuery: "jquery"
         })
     ]
 };

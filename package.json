@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp",
+    "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "watch": "webpack --watch --mode development",
     "dev": "webpack --mode development"
@@ -13,26 +13,16 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^9.1.5",
-    "babel-loader": "^8.0.2",
-    "bootstrap": "^4.0.0",
+    "babel-loader": "^8.0.4",
+    "bootstrap": "^4.1.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
-    "style-loader": "^0.23.0"
+    "style-loader": "^0.23.0",
+    "webpack-dev-server": "^3.1.9"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
-    "gulp": "^3.9.1",
-    "gulp-build": "^0.5.3",
-    "gulp-bundle-assets": "^2.29.0",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^3.1.0",
-    "gulp-htmlbuild": "^0.4.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-uglify": "^3.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "img-loader": "^3.0.0",

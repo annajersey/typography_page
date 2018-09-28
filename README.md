@@ -7,17 +7,19 @@ This is a sample typography page with different styled html elements
   - SASS
   - Bootstrap
   - JQuery
-  - GULP
+  - Webpack
 
 ---
 
 ### Instructions
 
-Run `gulp` to start development server on http://localhost:4545
+Run `npm run start` to start development server on http://localhost:8080
 
-Run `gulp build` to create production build
+Run `npm run start` to create developer build
 
-Open `build/index.html` to see the page
+Run `npm run build` to create production build
+
+Open `dist/index.html` to see the page
 
  
 
