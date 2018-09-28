@@ -41,7 +41,7 @@ gulp.task('build-js', function () {
         .pipe(uglify())
         .pipe(gulp.dest(buildDir + "/js"));
 });
-gulp.task('build-css',['sass','css'], function () {
+gulp.task('build-css', ['sass', 'css'], function () {
     return gulp.src('src/css/*')
         .pipe(concatCss("all.css"))
         .pipe(cleanCSS())
@@ -52,7 +52,7 @@ gulp.task('build-img', function () {
         'src/img/*'])
         .pipe(gulp.dest(buildDir + '/img'));
 });
-gulp.task('build-fonts', ['fonts'],function () {
+gulp.task('build-fonts', ['fonts'], function () {
     return gulp.src([
         'src/fonts/*'])
         .pipe(gulp.dest(buildDir + '/fonts/'));
@@ -74,15 +74,15 @@ gulp.task('build-html', function () {
 //eof build tasks
 
 //server&sync tasks
-gulp.task('serve', ['sass', 'fonts', 'css'], function () {
+gulp.task('serve', ['sass', 'fonts', 'css','js'], function () {
     browserSync.init({
         server: "./src",
         port: 4545
     });
     gulp.watch(['src/scss/*.scss'], ['sass']);
     gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("src/**/*.js").on('change', browserSync.reload);
 });
 
-
-gulp.task('default', ['js', 'serve']);
-gulp.task('build', [ 'build-js', 'build-css', 'build-img', 'build-fonts', 'build-html']);
+gulp.task('default', ['serve']);
+gulp.task('build', ['build-js', 'build-css', 'build-img', 'build-fonts', 'build-html']);

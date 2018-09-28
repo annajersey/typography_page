@@ -13,6 +13,8 @@ This is a sample typography page with different styled html elements
 
 ### Instructions
 
+Run `npm install` to install the dependencies
+
 Run `gulp` to start development server on http://localhost:4545
 
 Run `gulp build` to create production build
