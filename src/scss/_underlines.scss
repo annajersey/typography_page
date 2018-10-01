@@ -10,7 +10,7 @@
             height: 4px;
             background: $red-color;
             margin-bottom: 40px;
-            display:block;
+            display: block;
             content: '';
         }
     }
@@ -62,8 +62,8 @@
     opacity: 0;
     transform: translate(-50%, $tooltip-arrow-length);
     transition: visibility 0s linear $tooltip-transition-out-duration,
-    opacity $tooltip-transition-out-duration ease-in 0s,
-    transform $tooltip-transition-out-duration ease-in 0s;
+        opacity $tooltip-transition-out-duration ease-in 0s,
+        transform $tooltip-transition-out-duration ease-in 0s;
 
     &::after {
         content: "";
@@ -105,8 +105,8 @@
             opacity: 1;
             transform: translate(-50%, 0);
             transition: visibility 0s linear 0s,
-            opacity .3s ease-out 0s,
-            transform .3s ease-out 0s;
+                opacity .3s ease-out 0s,
+                transform .3s ease-out 0s;
         }
     }
 }

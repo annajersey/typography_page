@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
+    "eslint": "^5.6.1",
     "gulp": "^3.9.1",
     "gulp-build": "^0.5.3",
     "gulp-bundle-assets": "^2.29.0",
@@ -24,6 +25,16 @@
     "gulp-htmlbuild": "^0.4.2",
     "gulp-sass": "^3.1.0",
     "gulp-sass-lint": "^1.4.0",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.1",
+    "stylelint": "^9.6.0"
+  },
+  "stylelint": {
+    "rules": {
+      "block-no-empty": null,
+      "color-no-invalid-hex": true,
+      "declaration-colon-space-after": "always",
+      "indentation": 4,
+      "max-empty-lines": 2
+    }
   }
 }
