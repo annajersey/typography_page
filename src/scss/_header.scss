@@ -1,6 +1,5 @@
 /* ----------------- Top panel --------------------- */
 .topPanel {
-
     height: 40px;
     line-height: 20px;
     width: 100%;
@@ -28,7 +27,7 @@
         &:last-child {
             border-right: 1px solid $gray-color;
         }
-        a.menuLinks, span.value{
+        a.menuLinks, span.value {
             padding: 0 6px;
         }
         img {
@@ -37,8 +36,9 @@
         }
     }
     .floatRight {
+
         @include sm {
-            display: none
+            display: none;
         }
     }
 }
@@ -85,12 +85,14 @@ nav.navbar.navbar-light {
             line-height: 20px;
             border: 5px solid $white-color;
         }
+
         @include md() {
             position: absolute;
             margin-left: 300px;
             left: 0;
-            top: 0px;
+            top: 0;
         }
+
         @include sm() {
             margin-left: 200px;
         }
@@ -142,12 +144,12 @@ nav.navbar.navbar-light {
 .logo {
     width: 63px;
     height: 25px;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 26px;
     font-weight: bold;
     text-align: right;
-    color: #222222;
-    &:after{
+    color: #222;
+    &:after {
         background: $red-color;
         content: '';
         width: 9px;
@@ -161,18 +163,17 @@ nav.navbar.navbar-light {
 
 .logo::first-letter {
     color: #e24545;
-
 }
 
 .littleLogo {
     width: 63px;
     height: 10px;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 9.4px;
     text-align: right;
-    color: #444444;
+    color: #444;
     margin-top: 9px;
     margin-left: 1px;
 }
@@ -196,6 +197,10 @@ nav.navbar.navbar-light {
         }
     }
 }
-.lang .dropDownMenu{
-    div{ text-align: left; padding-left: 27px;}
+
+.lang .dropDownMenu {
+    div {
+        text-align: left;
+        padding-left: 27px;
+    }
 }

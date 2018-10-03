@@ -8,14 +8,19 @@ $font-stack: 'Montserrat', sans-serif;
 $font-sans: 'Open Sans', sans-serif;
 $screen-sm-max: 768px;
 $screen-md-max: 992px;
+
 @mixin sm {
+
     @media (max-width: #{$screen-sm-max}) {
+
         @content;
     }
 }
 
 @mixin md {
+
     @media (max-width: #{$screen-md-max}) {
+
         @content;
     }
 }
@@ -27,23 +32,23 @@ body {
     margin-bottom: 50px;
     font-size: 12px;
     font-weight: 500;
-    min-width: 576px
+    min-width: 576px;
 }
 
 .red {
-    color: $red-color
+    color: $red-color;
 }
 
 .blue {
-    color: #0897c5
+    color: #0897c5;
 }
 
 .orange {
-    color: #ff750b
+    color: #ff750b;
 }
 
 i.fas {
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     font-style: normal;
 }
 
@@ -64,14 +69,20 @@ i.fas {
 }
 
 .container {
+
     @include sm() {
         margin: 0 10px;
     }
 }
 
 @import "header";
+
 @import "headings";
+
 @import "underlines";
+
 @import "lists";
+
 @import "quotes";
+
 @import "form";
