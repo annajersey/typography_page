@@ -21,5 +21,7 @@ Run `gulp build` to create production build
 
 Open `build/index.html` to see the page
 
+To see version based on webpack checkout "webpack" branch
+
  
 
