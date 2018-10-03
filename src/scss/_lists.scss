@@ -1,22 +1,7 @@
 .lists {
+
     @extend %section;
-    //@mixin big-letter(
-    //    $size, $background, $font-size, $border-radius
-    //) {
-    //    width: $size;
-    //    height: $size;
-    //    background: $background;
-    //    color: $white-color;
-    //    font-size: $font-size;
-    //    text-align: center;
-    //    border-radius: $border-radius;
-    //    float: left;
-    //    font-weight: bold;
-    //    line-height: $size;
-    //    margin-right: 15px;
-    //    margin-top: 5px;
-    //}
-    .bigLetter{
+    .bigLetter {
         color: $white-color;
         text-align: center;
         float: left;
@@ -24,18 +9,15 @@
         margin-right: 15px;
         margin-top: 5px;
         &.red {
-            //@include big-letter(60px, $red-color, 45px, 50%)
             $size:60px;
             width: $size;
-            height:$size;
+            height: $size;
             line-height: $size;
             background: $red-color;
             border-radius: 50%;
             font-size: 45px;
-
         }
         &.gray {
-            //@include big-letter(42px, $gray-color, 32px, 0)
             $size:42px;
             width: $size;
             height: $size;
@@ -43,7 +25,6 @@
             background: $gray-color;
             border-radius: 0;
             font-size: 32px;
-
         }
     }
 
@@ -60,7 +41,7 @@ ul, ol {
 }
 ul {
     li:before {
-        font-family: 'FontAwesome';
+        font-family: serif, 'FontAwesome';
         width: 30px;
         font-size: 14px;
         display: inline-block;
@@ -89,7 +70,7 @@ ul {
         li.checked:before {
             content: "\f00d";
             color: $white-color;
-            padding: 0px;
+            padding: 0;
             vertical-align: middle;
             background: $red-color;
             font-weight: normal;
@@ -109,7 +90,6 @@ ul {
     &.longArrow li:before {
         content: "\f178";
         color: $red-color;
-
     }
     &.checkCircle li:before {
         content: "\f05d";
@@ -150,6 +130,5 @@ ol {
         text-align: center;
         border-radius: 50%;
         margin-right: 20px;
-
     }
 }

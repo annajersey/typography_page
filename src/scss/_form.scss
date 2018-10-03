@@ -1,4 +1,5 @@
 .form {
+
     @extend %section;
     form {
         margin-bottom: 20px;
@@ -66,9 +67,7 @@
         height: 8px;
         background: $gray-color;
         border-radius: 50%;
-
     }
-
 }
 
 .plainRadio {
@@ -110,7 +109,6 @@
             position: relative;
             vertical-align: bottom;
             margin-right: 4px;
-
         }
     }
 
@@ -129,9 +127,7 @@
         border: solid #fff;
         border-width: 0 3px 3px 0;
         transform: rotate(45deg);
-
     }
-
 }
 
 .redCheckbox {
@@ -153,6 +149,6 @@
         border: 1px solid #ccc;
     }
     [type=checkbox]:checked + span:after {
-        border-color: $gray-color
+        border-color: $gray-color;
     }
 }

@@ -1,4 +1,5 @@
 .headings {
+
     @extend %section;
     .row * {
         align-self: center !important;
@@ -11,6 +12,7 @@
         text-align: center;
     }
 }
+
 @for $i from 1 through 6 {
     h#{$i} {
         margin: 22px 0;
